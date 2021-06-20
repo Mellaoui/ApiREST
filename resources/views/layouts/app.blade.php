@@ -20,7 +20,7 @@
     </head>
     <body class="font-sans bg-gray-background antialiased">
         <header class="flex items-center justify-between px-8 py-4"> 
-                <a href={{ route('main-page') }}> Molabs</a>
+                <a href={{ route('main-page') }} class="font-bold text-2xl"> Molabs</a>
                 <div class="flex items-center">
                     <div class="px-6 py-4">
                         @if (Route::has('login'))
