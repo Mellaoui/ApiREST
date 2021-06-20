@@ -20,7 +20,7 @@
     </head>
     <body class="font-sans bg-gray-background antialiased">
         <header class="flex items-center justify-between px-8 py-4"> 
-                <a href="#"> Molabs</a>
+                <a href={{ route('main-page') }}> Molabs</a>
                 <div class="flex items-center">
                     <div class="px-6 py-4">
                         @if (Route::has('login'))
@@ -90,15 +90,15 @@
             <div class="w-175" >
                 <div class="nav flex items-center justify-between text-xs">
                     <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                         <li><a class="border-b-4 pb-3 border-blue" href="#"> All Ideas(100)</a></li>
-                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> Considering(6)</a></li>
-                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> In progress(1)</a></li>
+                         <li><a class="border-b-4 pb-3 border-yellow" href="#"> All Ideas(100)</a></li>
+                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-yellow" href="#"> Considering(6)</a></li>
+                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-yellow" href="#"> In progress(1)</a></li>
                          
                     </ul>
 
                     <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Inmplemented(10)</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (55)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-yellow">Inmplemented(10)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-yellow">Closed (55)</a></li>
                     </ul>
                 </div>
 

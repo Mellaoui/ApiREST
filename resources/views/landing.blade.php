@@ -272,6 +272,14 @@
                 >Technologies</a
               >
             </li>
+            <li class="mr-3">
+              <a
+                id="nav-link"
+                class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
+                href={{ route('community') }}
+                >Our Community</a
+              >
+            </li>
           </ul>
           <a
             id="navAction"
@@ -427,7 +435,7 @@
         <h2
          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
         >
-          Title
+          Our Mission
         </h2>
         <div class="w-full mb-4">
           <div
@@ -438,11 +446,12 @@
         <div class="flex flex-wrap">
           <div class="w-5/6 p-6 sm:w-1/2">
             <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
-              Lorem ipsum dolor sit amet
+              Level Up the Knowldge 
             </h3>
             <p class="mb-8 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
+              Our community is dedicated to solve problems for our clients and help poeple to build their success<br />
+              
+              <br />
 
               Images from:
               <a class="text-orange-500 underline" href="https://undraw.co/"

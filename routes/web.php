@@ -15,12 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('main-page');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/comunity',function(){
+Route::get('/community',function(){
     return view('comunity');
+})->name('community');
+
+
+Route::get('/community/single',function(){
+    return view('single');
 });

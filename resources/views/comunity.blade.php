@@ -38,16 +38,19 @@
                     </button>
                 </div>
             </div>
-            <div class="flex px-2 py-6">
-                <a href="#" class="flex-none">
-                    <img src="https://source.unsplash.com/200x200/?face&corp=face&v=1" alt="avater" class="w-14 h-14 rounded-xl">
-                </a>
-                <div class="mx-4">
+            <div class="flex flex-1 px-2 py-6">
+                <div class="flex-none">
+                    <a href="#">
+                        <img src="https://source.unsplash.com/200x200/?face&corp=face&v=1" alt="avater" class="w-14 h-14 rounded-xl">
+                    </a>
+                </div>
+                
+                <div class="w-full mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">A ransom title</a>
                     </h4>
-                    <div class=" flex  text-gray-600 mt-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores impedit porro, hic ex id animi quia voluptatibus esse ipsam dignissimos ut incidunt amet voluptatem dolore distinctio fugiat magnam nam.
+                    <div class="flex text-gray-600 mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     </div> 
                     <div class="flex tems-center justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
@@ -58,13 +61,13 @@
                             <div class="text-gray-900">3 comments</div>
                             <div>&bull;</div>   
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <button class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                        <div x-data="{ isOpen: false }" class="flex items-center space-x-2">
+                            <div class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                   Open  
-                            </button>
-                            <button class="bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in">
+                            </div>
+                            <button @click=" isOpen = !isOpen" class="bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in focus:outline-none">
                                 <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                                <ul class="absolute shadow-dialog w-44 text-left ml-6 font-semibold bg-white rounded-xl py-3">
+                                <ul x-show.transition.origin.top.left.500ms="isOpen" @click.away="isOpen = false" class="absolute shadow-dialog w-44 text-left ml-6 font-semibold bg-white rounded-xl py-3">
                                     <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 ">Mark as spam</a></li>
                                     <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 ">Delete</a></li>
                                 </ul>
