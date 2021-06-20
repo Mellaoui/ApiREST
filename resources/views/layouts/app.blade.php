@@ -55,19 +55,19 @@
             <div class="w-70 mr-5" >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quas, eos eum ratione similique error, laudantium iure facere iusto laboriosam provident cum deleniti delectus minus magni quidem eaque ullam? Culpa.</div>
             <div class="w-175" >
-                <nav class="flex items-center justify-between text-xs">
+                <div class="nav flex items-center justify-between text-xs">
                     <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
                          <li><a class="border-b-4 pb-3 border-blue" href="#"> All Ideas(100)</a></li>
                          <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> Considering(6)</a></li>
                          <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> In progress(1)</a></li>
-                         <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Inmplemented(10)</a></li>
-                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (55)</a></li>
+                         
                     </ul>
 
                     <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                        
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Inmplemented(10)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (55)</a></li>
                     </ul>
-                </nav>
+                </div>
 
                 <div class="mt-8">
                     {{ $slot }}
