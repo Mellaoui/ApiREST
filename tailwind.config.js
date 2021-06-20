@@ -28,10 +28,10 @@ module.exports = {
             },
             spacing: {
                 70: '17.5rem',
-                175: '43.7'
+                175: '43.7rem'
             },
             maxWidth:{
-                custom: '62.5rem' 
+                custom: '68.5rem' 
             },
             boxShadow:{
                 card: '4px 4px 15px 0 rgba(36, 37, 38, 0.08)',
