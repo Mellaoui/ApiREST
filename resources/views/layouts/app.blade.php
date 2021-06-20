@@ -18,29 +18,61 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
-
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+    <body class="font-sans bg-gray-background antialiased">
+        <header class="flex items-center justify-between px-8 py-4"> 
+                <a href="#"> Molabs</a>
+                <div class="flex items-center">
+                    <div class="px-6 py-4">
+                        @if (Route::has('login'))
+                            <div class="hidden top-0 right-0 px-6 py-4 sm:block">
+                                @auth
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+    
+                                    <a href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </a>
+                                </form>
+                                @else
+                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+            
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                    @endif
+                                @endauth
+                            </div>
+                        @endif
                     </div>
-                </header>
-            @endif
+                    <a href="#">
+                        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp" alt="avatar" class="w-10 h-10 rounded-full">
+                    </a>
+                </div>
+        </header>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
+        <main class="container mx-auto max-w-custom flex" > 
+            <div class="w-70 mr-5" >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quas, eos eum ratione similique error, laudantium iure facere iusto laboriosam provident cum deleniti delectus minus magni quidem eaque ullam? Culpa.</div>
+            <div class="w-175" >
+                <nav class="flex items-center justify-between text-xs">
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                         <li><a class="border-b-4 pb-3 border-blue" href="#"> All Ideas(100)</a></li>
+                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> Considering(6)</a></li>
+                         <li><a class="text-gray-400  transitio duration-150 ease-in border-b-4 pb-3 hover:border-blue" href="#"> In progress(1)</a></li>
+                         <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Inmplemented(10)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (55)</a></li>
+                    </ul>
 
-        @stack('modals')
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        
+                    </ul>
+                </nav>
 
-        @livewireScripts
+                <div class="mt-8">
+                    {{ $slot }}
+                </div>
+            </div>
+        </main>
     </body>
 </html>
