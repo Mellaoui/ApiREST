@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IdeaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,11 +22,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/community',function(){
-    return view('comunity');
-})->name('community');
+Route::get('/community',[IdeaController::class, 'index'])->name('community');
 
 
-Route::get('/community/single',function(){
-    return view('single');
-});
+Route::get('/community/single/{idea:slug}',[IdeaController::class,'show'])->name('showIdea');
