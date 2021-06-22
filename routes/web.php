@@ -18,11 +18,9 @@ Route::get('/', function () {
     return view('landing');
 })->name('main-page');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
-Route::get('/community',[IdeaController::class, 'index'])->name('community');
+Route::middleware(['auth:sanctum', 'verified'])->get('/community',[IdeaController::class, 'index'])->name('community');
 
+Route::get('/overview',[IdeaController::class,'index'])->name('overview');
 
 Route::get('/community/single/{idea:slug}',[IdeaController::class,'show'])->name('showIdea');

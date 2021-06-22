@@ -276,7 +276,7 @@
               <a
                 id="nav-link"
                 class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
-                href={{ route('community') }}
+                href={{ route('overview') }}
                 >Our Community</a
               >
             </li>
