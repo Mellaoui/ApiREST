@@ -16,7 +16,7 @@ class CommunityMain extends Component
     public function mount(Idea $idea, $votesCount){
         $this->idea = $idea;
         $this->votesCount = $votesCount;
-        $this->Isvoted = $idea->isVotedByUser(auth()->user());
+        $this->Isvoted = $idea->voted_by_user;
     }
 
     public function render()
