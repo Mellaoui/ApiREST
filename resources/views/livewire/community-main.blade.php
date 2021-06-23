@@ -13,13 +13,19 @@ x-data
 class="idea-container hover:shadow-card transition duration-150 ease-in bg-white rounded-xl flex cursor-pointer">
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="text-center">
-            <div class="font-semibold text-2xl">{{ $idea->votes_count }}</div>
+            <div class="font-semibold @if($Isvoted) text-blue @endif text-2xl">{{ $idea->votes_count }}</div>
             <div class="text-gray-500">Votes </div>
         </div>
         <div class="mt-8">
-            <button class="button w-20  font-bold bg-gray-200 border border-gray-200 text-xxs hover:border-gray-400 transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
+            @if($Isvoted)
+            <button class="button w-20 font-bold text-white bg-blue border border-blue text-xxs hover:bg-blue-hover transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
+                Voted
+            </button>
+            @else
+            <button class="button w-20 font-bold bg-gray-200 border border-gray-200 text-xxs hover:border-gray-400 transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
                 Vote
             </button>
+            @endif
         </div>
     </div>
     <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
@@ -59,12 +65,18 @@ class="idea-container hover:shadow-card transition duration-150 ease-in bg-white
                 </div>
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
                     <div class="bg-gray-100 text-center rounded-2xl h-10 px-4 py-2 pr-8">
-                        <div class="text-sm font-blod leading-none">{{ $idea->votes_count }}</div>
+                        <div class="text-sm font-blod leading-none @if($Isvoted) text-blue @endif">{{ $idea->votes_count }}</div>
                         <div class="text-xxs font-semibold leading-none text-gray-400">Vote</div>
                     </div>
+                    @if($Isvoted)
+                    <button class="bg-blue text-white rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
+                        Vote
+                    </button>
+                    @else
                     <button class="bg-gray-200 rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
                         Vote
                     </button>
+                    @endif
                 </div>
             </div>
         </div>

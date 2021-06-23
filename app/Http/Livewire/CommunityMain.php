@@ -10,11 +10,13 @@ class CommunityMain extends Component
 {
 
     public $idea;
-    //public $votesCount;
+    public $votesCount;
+    public $Isvoted;
 
     public function mount(Idea $idea, $votesCount){
         $this->idea = $idea;
         $this->votesCount = $votesCount;
+        $this->Isvoted = $idea->isVotedByUser(auth()->user());
     }
 
     public function render()
