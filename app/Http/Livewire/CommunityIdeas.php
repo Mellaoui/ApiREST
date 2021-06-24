@@ -17,7 +17,7 @@ class CommunityIdeas extends Component
        $statuses = Status::all()->pluck('id','name');
 
         return view('livewire.community-ideas',['ideas'=>Idea::with('user','category','status')
-        ->when(request()->status !== 'All', function($query) use ($statuses){
+        ->when(request()->status && request()->status !== 'All', function($query) use ($statuses){
             return $query->where('status_id',$statuses->get(request()->status));
         })
         ->addSelect(['voted_by_user' => Vote::select('id')
