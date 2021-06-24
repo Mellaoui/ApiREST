@@ -42,8 +42,6 @@ class Idea extends Model
     }
 
     public function getStatusClass(){
-
-
         $allStatuses = [
             'Open' => 'bg-gray-200',
             'Considering'=> 'bg-purple text-white',
@@ -61,6 +59,22 @@ class Idea extends Model
         }else{
             return Vote::where('user_id', $user->id)->where('idea_id',$this->id)->exists();
         }
-        
     }
+
+
+    public function Vote(User $user){
+        /*Vote::create([
+            'user_id'=>$user->id,
+            'idea_id'=>$this->id,
+        ]);*/
+
+        $this->votes()->attach($user);
+    }
+
+
+    public function UnVote(User $user){
+        //Vote::where('idea_id',$this->id)->where('user_id',$user->id)->first()->delete();
+        $this->votes()->detach($user);
+    }
+
 }

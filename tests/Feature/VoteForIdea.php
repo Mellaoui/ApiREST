@@ -1,8 +1,6 @@
 <?php
 
 namespace Tests\Feature;
-
-use App\Http\Livewire\IdeaSingle;
 use App\Models\Category;
 use App\Models\Idea;
 use App\Models\Status;
@@ -10,17 +8,13 @@ use App\Models\User;
 use App\Models\Vote;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Livewire\Livewire;
 use Tests\TestCase;
 
-class VoteSinglePageTest extends TestCase
+class VoteForIdea extends TestCase
 {
-   use RefreshDatabase;
 
-   /** @test */
-
-   public function  single_page_vote()
-   {
+    /** @test */
+    public function vote_for_idea(){
         $user = User::factory()->create();
 
         $categoryOne = Category::factory()->create(['name'=>'Category1']);
@@ -35,24 +29,16 @@ class VoteSinglePageTest extends TestCase
                 'description'=>'Description for my first idea',
             ]);
 
-        Vote::factory()->create(
-                [
-                    'user_id'=>$user->id,
-                    'idea_id'=>$idea->id
-                ]
-                );
 
-  
+           /* Vote::create([
+                'idea_id'=>$idea->id,
+                'user_id'=>$user->id
+            ]);*/
+            $this->assertFalse($idea->isVotedByUser($user));
+            $idea->vote($user);
+            $this->assertTrue($idea->isVotedByUser($user));
+            $idea->Unvote($user);
+            
+    }
         
-        
-
-            Livewire::actingAs($user)
-            ->test(IdeaSingle::class,[
-                'idea' => $idea,
-                'votesCount' => 5
-            ])->assertSet('Isvoted',true)
-            ->assertSee('voted');
-        //$this->get(route('showIdea', $idea))->assertSeeLivewire('idea-single');   
-
-   }
 }

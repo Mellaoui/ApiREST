@@ -19,6 +19,21 @@ class CommunityMain extends Component
         $this->Isvoted = $idea->voted_by_user;
     }
 
+    public function vote(){
+        if(auth()->guest()){
+            return redirect(route('login'));
+        }
+        if($this->Isvoted){
+            $this->idea->UnVote(auth()->user());
+            $this->votesCount--;
+            $this->Isvoted=false;
+        }else{
+            $this->idea->vote(auth()->user());
+            $this->votesCount++;
+            $this->Isvoted=true;
+        }
+    }
+
     public function render()
     {
         return view('livewire.community-main');

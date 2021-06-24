@@ -13,16 +13,16 @@ x-data
 class="idea-container hover:shadow-card transition duration-150 ease-in bg-white rounded-xl flex cursor-pointer">
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="text-center">
-            <div class="font-semibold @if($Isvoted) text-blue @endif text-2xl">{{ $idea->votes_count }}</div>
+            <div class="font-semibold @if($Isvoted) text-blue @endif text-2xl">{{ $idea->votes_count  }}</div><!---votes_count is the added column with subquery to store voted ids--->
             <div class="text-gray-500">Votes </div>
         </div>
         <div class="mt-8">
             @if($Isvoted)
-            <button class="button w-20 font-bold text-white bg-blue border border-blue text-xxs hover:bg-blue-hover transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
+            <button wire:click="vote" type="button" class="button w-20 font-bold text-white bg-blue border border-blue text-xxs hover:bg-blue-hover transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
                 Voted
             </button>
             @else
-            <button class="button w-20 font-bold bg-gray-200 border border-gray-200 text-xxs hover:border-gray-400 transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
+            <button wire:click="vote" type="button" class="button w-20 font-bold bg-gray-200 border border-gray-200 text-xxs hover:border-gray-400 transition ease-in duration-150 uppercase rounded-xl px-4 py-3">
                 Vote
             </button>
             @endif
@@ -69,11 +69,11 @@ class="idea-container hover:shadow-card transition duration-150 ease-in bg-white
                         <div class="text-xxs font-semibold leading-none text-gray-400">Vote</div>
                     </div>
                     @if($Isvoted)
-                    <button class="bg-blue text-white rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
-                        Vote
+                    <button wire:click.prevent="vote" type="button" class="bg-blue text-white rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
+                        Voted
                     </button>
                     @else
-                    <button class="bg-gray-200 rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
+                    <button wire:click.prevent="vote" type="button" class="bg-gray-200 rounded-2xl h-10 px-4 transition duration-150 ease-in focus:outline-none -mx-4">
                         Vote
                     </button>
                     @endif
