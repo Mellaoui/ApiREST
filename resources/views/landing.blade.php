@@ -220,13 +220,7 @@
             id="logo" class="text-2xl font-bold no-underline hover:no-underline lg:text-4xl"
             href="#"
           >
-            <svg
-              class="inline-block w-6 h-6 text-yellow-700 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-            </svg>
+            <svg class="inline-block w-6 h-6 text-yellow-700 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             MOLABS
           </a>
         </div>
@@ -438,7 +432,7 @@
     <section class="py-8 bg-gray-100 border-b">
       <div id="from-left" class="container max-w-5xl m-8 mx-auto">
         <h2
-         class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+         class="w-full my-2 text-3xl font-black leading-tight text-center text-gray-800"
         >
           Our Mission
         </h2>
@@ -450,7 +444,7 @@
 
         <div class="flex flex-wrap">
           <div class="w-5/6 p-6 sm:w-1/2">
-            <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
+            <h3 class="mb-3 text-xl font-bold leading-none text-gray-800">
               Level Up the Knowldge 
             </h3>
             <p class="mb-8 text-gray-600">
@@ -899,7 +893,7 @@
           </div>
           <div class="w-full p-6 mt-6 sm:w-1/2">
             <div class="align-middle">
-              <h3 class="mb-3 text-3xl font-bold leading-none text-gray-800">
+              <h3 class="mb-3 text-xl font-bold leading-none text-gray-800">
                 Lorem ipsum dolor sit amet
               </h3>
               <p class="mb-8 text-gray-600">
@@ -919,7 +913,7 @@
     <section class="py-8 bg-white border-b">
       <div class="container flex flex-wrap pt-4 pb-12 mx-auto">
         <h2
-          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+          class="w-full my-2 text-3xl font-black leading-tight text-center text-gray-800"
         >
          Our Technologies
         </h2>
@@ -973,7 +967,7 @@
     <section class="py-8 bg-gray-100">
       <div class="container px-2 pt-4 pb-12 mx-auto text-gray-800">
         <h2
-          class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800"
+          class="w-full my-2 text-3xl font-black leading-tight text-center text-gray-800"
         >
           Pricing
         </h2>
@@ -1083,27 +1077,27 @@
       </div>
     </section>
 
-    <section class="w-full pt-6 pb-12 mx-auto text-center gradient">
-      <h2
-        class="w-full my-2 text-5xl font-black leading-tight text-center text-white"
-      >
-        Call to Action
-      </h2>
-      <div class="w-full mb-4">
-        <div
-          class="w-1/6 h-1 py-0 mx-auto my-0 bg-white rounded-t opacity-25"
-        ></div>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+          <h2
+        class="w-full my-2 text-3xl font-black leading-tight text-center text-white">
+            Subscribe to our News Letter
+          </h2>
+          <p class="lg:w-2/3 mx-auto  text-white leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep.</p>
+        </div>
+        <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+          <div class="relative flex-grow w-full">
+            <label for="full-name" class="leading-7 text-sm text-gray-100">Full Name</label>
+            <input type="text" id="full-name" name="full-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative flex-grow w-full">
+            <label for="email" class="leading-7 text-sm text-gray-100">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Subscribe</button>
+        </div>
       </div>
-
-      <h3 class="my-4 text-3xl font-extrabold">
-        Main Hero Message to sell yourself!
-      </h3>
-
-      <button
-        class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 bg-white rounded shadow-lg lg:mx-0 hover:underline"
-      >
-        Action!
-      </button>
     </section>
 
     <!--Footer-->
@@ -1115,14 +1109,8 @@
               class="text-2xl font-bold text-orange-600 no-underline hover:no-underline lg:text-4xl"
               href="#"
             >
-              <svg
-                class="inline-block w-6 h-6"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
-              </svg>
-              Bolt App
+            <svg class= " inline-block w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              Molabs
             </a>
           </div>
 
