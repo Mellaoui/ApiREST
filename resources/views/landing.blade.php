@@ -172,36 +172,6 @@
       .browser-mockup > * {
         display: block;
       }
-
-
-
-      /*modal css*/
-      [x-cloak] {
-			display: none;
-		}
-
-		.duration-300 {
-			transition-duration: 300ms;
-		}
-
-		.ease-in {
-			transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-		}
-
-		.ease-out {
-			transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-		}
-
-		.scale-90 {
-			transform: scale(.9);
-		}
-
-		.scale-100 {
-			transform: scale(1);
-		}
-
-  
-	
     
     </style>
   </head>
@@ -220,7 +190,7 @@
             id="logo" class="text-2xl font-bold no-underline hover:no-underline lg:text-4xl"
             href="#"
           >
-            <svg class="inline-block w-6 h-6 text-yellow-700 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <svg class="inline-block w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             MOLABS
           </a>
         </div>
@@ -288,42 +258,8 @@
           </a>
         </div>
       </div>
-    </nav>
-        <!---modal section-->
-            <!--Overlay-->
-                <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal" :class="{ 'absolute inset-0 z-10 flex items-center justify-center': showModal }">
-                    <!--Dialog-->
-                    <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md" x-show="showModal" @click.away="showModal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
-
-                        <!--Title-->
-                        <div class="flex items-center justify-between pb-3">
-                            <p class="text-2xl font-bold">Simple Modal!</p>
-                            <div class="z-50 cursor-pointer" @click="showModal = false">
-                                <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                    <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- content -->
-                        <p>Modal content can go here</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-                        <p>...</p>
-
-                        <!--Footer-->
-                        <div class="flex justify-end pt-2">
-                            <button class="p-3 px-4 mr-2 text-indigo-500 bg-transparent rounded-lg hover:bg-gray-100 hover:text-indigo-400" @click="alert('Additional Action');">Action</button>
-                            <button class="p-3 px-4 text-white bg-indigo-500 rounded-lg modal-close hover:bg-indigo-400" @click="showModal = false">Close</button>
-                        </div>
-
-
-                    </div>
-                    <!--/Dialog -->
-                </div>
-            <!-- /Overlay -->
-            </section>
+    </nav>        
+    </section>
         <!------>
     <div class="pt-24 ">
       <div class="container flex flex-col flex-wrap items-center px-3 mx-auto md:flex-row">
@@ -336,7 +272,7 @@
           <p class="mb-8 text-2xl leading-normal text-white">
             We are a leading mobile application development company in Algeria. Molabs helps businesses develop robust mobile application at a record breaking speed.
           </p>
-          <button @click="showModal = true" class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg button lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105">
+          <button class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg button lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105">
             <a>Explore</a>
           </button>
         </div>
@@ -964,118 +900,7 @@
       </div>
     </section>
 
-    <section class="py-8 bg-gray-100">
-      <div class="container px-2 pt-4 pb-12 mx-auto text-gray-800">
-        <h2
-          class="w-full my-2 text-3xl font-black leading-tight text-center text-gray-800"
-        >
-          Pricing
-        </h2>
-        <div class="w-full mb-4">
-          <div
-            class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-25 gradient"
-          ></div>
-        </div>
-
-        <div
-          class="flex flex-col justify-center pt-12 my-12 sm:flex-row sm:my-4"
-        >
-          <div
-            class="flex flex-col w-5/6 mx-auto mt-4 bg-white rounded-none lg:w-1/4 lg:mx-0 lg:rounded-l-lg"
-          >
-            <div
-              class="flex-1 overflow-hidden text-gray-600 bg-white rounded-t rounded-b-none shadow"
-            >
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Free
-              </div>
-              <ul class="w-full text-sm text-center">
-                <li class="py-4 border-b">Thing</li>
-                <li class="py-4 border-b">Thing</li>
-                <li class="py-4 border-b">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow"
-            >
-              <div
-                class="w-full pt-6 text-3xl font-bold text-center text-gray-600"
-              >
-                £0 <span class="text-base">for one user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 rounded shadow-lg lg:mx-0 hover:underline gradient2"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="z-10 flex flex-col w-5/6 mx-auto mt-4 bg-white rounded-lg shadow lg:w-1/3 lg:mx-0 sm:-mt-6 gradient hover:shadow-lg"
-          >
-            <div class="flex-1 overflow-hidden rounded-t rounded-b-none">
-              <div class="w-full p-8 text-3xl font-bold text-center text-white">Basic</div>
-              <ul  class="w-full text-base font-bold text-center">
-                <li id="offer" class="py-4 text-white">Thing</li>
-                <li id="offer" class="py-4 text-white">Thing</li>
-                <li id="offer" class="py-4 text-white">Thing</li>
-                <li id="offer" class="py-4 text-white">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none p-6 mt-auto overflow-hidden rounded-t-none rounded-b"
-            >
-              <div class="w-full pt-6 text-4xl font-bold text-center text-white">
-                £x.99 <span class="text-base text-white">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 rounded shadow-lg lg:mx-0 hover:underline gradient2"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-col w-5/6 mx-auto mt-4 bg-white rounded-none lg:w-1/4 lg:mx-0 lg:rounded-l-lg"
-          >
-            <div
-              class="flex-1 overflow-hidden text-gray-600 bg-white rounded-t rounded-b-none shadow"
-            >
-              <div class="p-8 text-3xl font-bold text-center border-b-4">
-                Pro
-              </div>
-              <ul class="w-full text-sm text-center">
-                <li class="py-4 border-b">Thing</li>
-                <li class="py-4 border-b">Thing</li>
-                <li class="py-4 border-b">Thing</li>
-              </ul>
-            </div>
-            <div
-              class="flex-none p-6 mt-auto overflow-hidden bg-white rounded-t-none rounded-b shadow"
-            >
-              <div
-                class="w-full pt-6 text-3xl font-bold text-center text-gray-600"
-              >
-                £x.99 <span class="text-base">/ per user</span>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 rounded shadow-lg lg:mx-0 hover:underline gradient2"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">

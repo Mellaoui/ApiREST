@@ -9,7 +9,7 @@ use Livewire\Component;
 class StatusFilters extends Component
 {
 
-    public $status = 'All';
+    public $status;
 
     public $allstatusCount;
     public $openstatusCount;
@@ -37,6 +37,7 @@ class StatusFilters extends Component
 
     public function setStatus($newStatus){
         $this->status = $newStatus;
+        $this->emit('queryStringUpdated', $this->status);
 
         return redirect()->route('community',['status' => $this->status,]);
     }
