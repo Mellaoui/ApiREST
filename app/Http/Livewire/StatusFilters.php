@@ -10,6 +10,7 @@ class StatusFilters extends Component
 {
 
     public $status;
+    
 
     public $allstatusCount;
     public $openstatusCount;
@@ -18,10 +19,7 @@ class StatusFilters extends Component
     public $implementedstatusCount;
     public $closedstatusCount;
 
-    protected $queryString = [
-        'status'
-    ];
-
+   
     public function mount(){
         $this->allstatusCount  = Idea::count();
         $this->openstatusCount = Idea::where('status_id',1)->count();
@@ -30,20 +28,34 @@ class StatusFilters extends Component
         $this->implementedstatusCount = Idea::where('status_id',4)->count();
         $this->closedstatusCount = Idea::where('status_id',5)->count();
 
+        $this->status = request()->status ?? 'All';
+
+
         if(Route::currentRouteName()==='showIdea'){
             $this->status = null;
         }
     }
 
-    public function setStatus($newStatus){
+    public function setStatus($newStatus)
+    {
         $this->status = $newStatus;
-        $this->emit('queryStringUpdated', $this->status);
-
-        return redirect()->route('community',['status' => $this->status,]);
+        $this->emit('queryStringUpdatedStatus', $this->status);
+        if($this->getPreviousRouteName() === 'showIdea'){
+            return redirect()->route('community', [
+                'status' => $this->status,
+            ]);  
+        }
+                 
     }
+
 
     public function render()
     {
         return view('livewire.status-filters');
+    }
+
+
+    private function getPreviousRouteName(){
+        return app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName();
     }
 }

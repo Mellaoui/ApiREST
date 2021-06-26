@@ -29,7 +29,7 @@ class CommunityMain extends Component
             $this->Isvoted=false;
         }else{
             $this->idea->vote(auth()->user());
-            $this->votesCount++;
+            $this->votesCount ++;
             $this->Isvoted=true;
         }
     }
