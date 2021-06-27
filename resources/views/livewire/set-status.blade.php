@@ -5,6 +5,15 @@
             })"  
      class="relative"
      >
+     <span x-data="{ isVisible: true }"
+                x-init="
+                    setTimeout(() => {
+                        isVisible = false
+                    }, 8000)
+                "
+                x-show.transition.duration.8000ms="isVisible" class="text-red font-bold">
+                {{ session('message') }}
+     </span>
     <button
         @click=" isOpen = !isOpen"
         type="button"

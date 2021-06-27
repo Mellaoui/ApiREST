@@ -1,6 +1,5 @@
 <div class="div idea-and-busttins container">
         
-    
     <div class="idea-container bg-white rounded-xl flex mt-4">
             <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
                 <div class="flex-none mx-2 md:mx-4">
@@ -94,7 +93,7 @@
                         </form>
                     </div>
                 </div>
-                <livewire:set-status :idea="$idea" />
+                    <livewire:set-status :idea="$idea" />
             </div>
 
             <div class="hidden md:flex items-center space-x-3">
