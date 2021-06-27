@@ -21,13 +21,18 @@ class SetStatus extends Component
 
     public function setStatus(){
 
-        if(auth()->user()->id == $this->idea->user_id){
-            $this->idea->status_id = $this->status;
-            $this->idea->save();
-            $this->emit('statusWasUpdated');
+        if( auth()->user()){
+
+            if(auth()->user()->id == $this->idea->user_id){
+                $this->idea->status_id = $this->status;
+                $this->idea->save();
+                $this->emit('statusWasUpdated');
+            }else{
+                $this->emit('statusWasUpdated');
+                session()->flash('message', 'You can not set status to Others ideas');
+            }
         }else{
-            $this->emit('statusWasUpdated');
-            session()->flash('message', 'You can not set status to Others ideas');
+           return redirect()->route('login');
         }
         
        
