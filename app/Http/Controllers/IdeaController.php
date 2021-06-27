@@ -51,6 +51,7 @@ class IdeaController extends Controller
         return view('single', [
             'idea'=> $idea,
             'votesCount'=>$idea->votes()->count(),
+            
     ]);
     }
 
