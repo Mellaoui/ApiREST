@@ -11,6 +11,13 @@ class IdeaSingle extends Component
     public $votesCount;
     public $Isvoted;
 
+
+    protected $listeners = ['statusWasUpdated'];
+
+    public function statusWasUpdated(){
+        $this->idea->refresh();
+    }
+
     public function mount(Idea $idea, $votesCount){
         $this->idea = $idea;
         $this->votesCount = $votesCount;

@@ -70,4 +70,8 @@ class User extends Authenticatable
     public function getAvatar(){
         return 'https://www.gravatar.com/avatar/'.md5($this->email).'?s=60'.'&d=mp';
     }
+
+    public function IsAdmin(){
+        
+    }
 }

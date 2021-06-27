@@ -1,6 +1,6 @@
 <x-app-layout>
     <div>
-        <a href={{ route('community') }} class="flex items-center font-semibold hover:underline">
+        <a href={{ $backUrl }} class="flex items-center font-semibold hover:underline">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
             <span class="ml-2">All ideas</span>
         </a>
