@@ -71,11 +71,13 @@ class User extends Authenticatable
         return 'https://www.gravatar.com/avatar/'.md5($this->email).'?s=60'.'&d=mp';
     }
 
-    public function IsAuthor(){
-       if(Idea::where('user_id',auth()->user()->id)){
-           return true;
-       }else{
-           return false;
-       }
+    public function IsAdmin(){
+
+        return in_array($this->email,
+        [
+            'modijavelin@gmail.com',
+            'e.mellaoui@gmail.com'
+        ]);
     }
+
 }

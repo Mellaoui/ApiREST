@@ -4,7 +4,10 @@
     x-data="{isOpen: false}"
     x-show="isOpen"
     @keydown.escape.window="{isOpen = false}"
-    @custom-show-edit-modal.window ="isOpen = true"
+    @custom-show-edit-modal.window ="
+                                        isOpen = true
+                                        $nextTick(()=> $refs.title.focus())     
+                                    " 
     x-init="
             window.livewire.on('ideaWasUpdated', () => {
                 isOpen = false
@@ -37,11 +40,11 @@
             From: "opacity-100 translate-y-0 sm:scale-100"
             To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
         -->
-        <div x-show.transition.origin.bottom.duration.800ms="isOpen"  @click.away = "isOpen = false" class="modal bg-white rounded-tl-xl rounded-tr-xl text-left overflow-hidden transform transition-all sm:my-8 py-4 sm:max-w-lg sm:w-full">
+        <div x-show.transition.duration.800ms="isOpen"  @click.away = "isOpen = false" class="modal bg-white rounded-tl-xl rounded-tr-xl text-left overflow-hidden transform transition-all sm:my-8 py-4 sm:max-w-lg sm:w-full">
             <div class="absolute top-0 right-0 pt-4 pr-4">
                 <button 
-                @click="{isOpen = false}"
-                 class="text-gray-400 hover:text-gray-500">
+                    @click="{isOpen = false}"
+                    class="text-gray-400 hover:text-gray-500">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
@@ -52,7 +55,7 @@
 
                     <form wire:submit.prevent="updateIdea" action="#" method="POST" class="space-y-4 px-4 py-6">
                         <div>
-                            <input wire:model.defer="title" type="text" class="w-full text-sm bg-gray-100 border-none rounded-xl placeholder-gray-900 px-4 py-2" placeholder="Your Idea" required>
+                            <input x-ref="title" wire:model.defer="title" type="text" class="w-full text-sm bg-gray-100 border-none rounded-xl placeholder-gray-900 px-4 py-2" placeholder="Your Idea" required>
                             @error('title')
                                 <p class="text-red text-xs mt-1">{{ $message }}</p>
                             @enderror

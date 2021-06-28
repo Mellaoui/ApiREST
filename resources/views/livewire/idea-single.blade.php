@@ -37,7 +37,7 @@
                                         @can('update', $idea)
                                         <li> 
                                             <a
-                                                @click="
+                                                @click.prevent="
                                                 isOpen = false
                                                 $dispatch('custom-show-edit-modal') "
                                                 href="#" 
@@ -46,9 +46,17 @@
                                             </a>
                                         </li>
                                         @endcan
-                                       
+                                        @can('delete', $idea)
+                                        <li><a  
+                                                @click.prevent="
+                                                isOpen = false
+                                                $dispatch('custom-show-delete-modal') " 
+                                                href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">
+                                                Delete
+                                            </a>
+                                        </li>
+                                        @endcan
                                     <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">Mark as Spam</a></li>
-                                    <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">Delete</a></li>
                                 </ul>
                             </div>
                             

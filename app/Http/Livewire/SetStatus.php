@@ -23,7 +23,7 @@ class SetStatus extends Component
 
         if( auth()->user()){
 
-            if(auth()->user()->id == $this->idea->user_id){
+            if(auth()->user()->IsAdmin() || auth()->user()->id == $this->idea->user_id){
                 $this->idea->status_id = $this->status;
                 $this->idea->save();
                 $this->emit('statusWasUpdated');
