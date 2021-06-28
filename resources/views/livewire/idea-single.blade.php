@@ -33,16 +33,20 @@
                                     
                                 </button>
                                 <ul x-show.transition.origin.top.left.500ms="isOpen" @click.away="isOpen = false" class="absolute w-36 md:w-44 text-left z-10 font-semibold bg-white shadow-dialog rounded-xl py-3 ml-88">
-                                    <li>
-                                        <a
-                                            @click="
-                                            isOpen = false
-                                            $dispatch('custom-show-edit-modal') "
-                                            href="#" 
-                                            class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">
-                                            Edit Idea
-                                        </a>
-                                    </li>
+                                    
+                                        @can('update', $idea)
+                                        <li> 
+                                            <a
+                                                @click="
+                                                isOpen = false
+                                                $dispatch('custom-show-edit-modal') "
+                                                href="#" 
+                                                class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">
+                                                Edit Idea
+                                            </a>
+                                        </li>
+                                        @endcan
+                                       
                                     <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">Mark as Spam</a></li>
                                     <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3 text-sm md:text-lg">Delete</a></li>
                                 </ul>

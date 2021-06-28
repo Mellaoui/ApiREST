@@ -8,8 +8,10 @@
 
     <livewire:idea-single :idea="$idea" :votesCount="$votesCount" />
 
-    <livewire:edit-idea />
-
+    @can('update', $idea)
+        <livewire:edit-idea :idea="$idea"/>
+    @endcan
+    
     <div class="comments-container relative space-y-6 md:ml-24 pt-4 my-8 mt-1">
         <div class="comment-container relative bg-white rounded-xl flex mt-4">
             <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
@@ -115,4 +117,21 @@
             </div>
         </div>
     </div> <!-- end comments-container -->
+    <script>
+        const Toast = Swal.mixin({
+                toast: true,
+                position: 'bottom-right',
+                iconColor: 'white',
+                customClass: {
+                    popup: 'colored-toast'
+                },
+                showConfirmButton: false,
+                timer: 3500,
+                timerProgressBar: true
+            })
+        window.addEventListener('swal', event =>{
+             Toast.fire(event.detail);
+        });
+        
+    </script>
 </x-app-layout>
