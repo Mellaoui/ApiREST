@@ -12,7 +12,7 @@ class IdeaSingle extends Component
     public $Isvoted;
 
 
-    protected $listeners = ['statusWasUpdated','ideaWasUpdated'];
+    protected $listeners = ['statusWasUpdated','ideaWasUpdated','commented' ];
 
     public function statusWasUpdated(){
         $this->idea->refresh();
@@ -42,6 +42,12 @@ class IdeaSingle extends Component
             $this->votesCount++;
             $this->Isvoted=true;
         }
+        $this->idea->refresh();
+    }
+
+   
+    public function commented()
+    {
         $this->idea->refresh();
     }
 
