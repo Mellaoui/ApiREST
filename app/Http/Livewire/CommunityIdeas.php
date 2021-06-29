@@ -84,6 +84,7 @@ class CommunityIdeas extends Component
         ->whereColumn('idea_id','ideas.id')
         ])
         ->withCount('votes')
+        ->withCount('comments')
         ->latest()
         ->simplePaginate(10),
         'categories'=>Category::all(),

@@ -27,9 +27,17 @@ class SetStatus extends Component
                 $this->idea->status_id = $this->status;
                 $this->idea->save();
                 $this->emit('statusWasUpdated');
+                $this->dispatchBrowserEvent('swal',[
+                    'title'=> 'Status Updated',
+                    'icon' => 'success',
+                ]);
             }else{
-                $this->emit('statusWasUpdated');
-                session()->flash('message', 'You can not set status to Others ideas');
+                //$this->emit('statusWasUpdated');
+                //session()->flash('message', 'You can not set status to Others ideas');
+                $this->dispatchBrowserEvent('swal',[
+                    'title'=> 'Cannot set status on others ideas',
+                    'icon' => 'error',
+                ]);
             }
         }else{
            return redirect()->route('login');

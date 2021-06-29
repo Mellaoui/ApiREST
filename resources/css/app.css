@@ -61,9 +61,28 @@
 
 /**SweetAlert style**/
 .colored-toast.swal2-icon-success {
-    background-color: #328af1 !important;
+    background-color: #2563EB !important;
 }
 .colored-toast .swal2-title {
     color: white;
 }
     
+.colored-toast.swal2-icon-error {
+    background-color: #EF4444 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+    background-color: #F87171 !important;
+}
+
+.colored-toast.swal2-icon-info {
+    background-color: #93C5FD!important;
+}
+
+.colored-toast .swal2-close {
+    color: white;
+}
+  
+.colored-toast .swal2-content {
+    color: white;
+}

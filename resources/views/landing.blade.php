@@ -23,7 +23,6 @@
       rel="stylesheet"
     />
     <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
-
     <style>
       @import url("https://rsms.me/inter/inter.css");
       html {
@@ -146,9 +145,9 @@
       }
 
       /* Browser mockup code
- * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
- * Live example: https://updown.io
- */
+      * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+      * Live example: https://updown.io
+      */
 
       .browser-mockup {
         border-top: 2em solid rgba(230, 230, 230, 0.7);

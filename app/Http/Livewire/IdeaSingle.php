@@ -17,6 +17,7 @@ class IdeaSingle extends Component
     public function statusWasUpdated(){
         $this->idea->refresh();
     }
+    
     public function ideaWasUpdated(){
         $this->idea->refresh();
     }

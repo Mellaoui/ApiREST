@@ -12,12 +12,13 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
 
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body class="font-sans bg-gray-background antialiased"> 
         <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4"> 
