@@ -271,9 +271,11 @@
           <p class="mb-8 text-2xl leading-normal text-white">
             We are a leading mobile application development company in Algeria. Molabs helps businesses develop robust mobile application at a record breaking speed.
           </p>
-          <button class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg button lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105">
-            <a>Explore</a>
-          </button>
+          
+            <a href="#" class="px-8 py-4 mx-auto my-6 font-bold text-gray-800 transition duration-300 ease-in-out transform bg-white rounded-full shadow-lg button lg:mx-0 hover:underline focus:outline-none focus:shadow-outline hover:scale-105">
+                Join Us
+            </a>
+          
         </div>
         <!--Right Col-->
         <div class="w-full py-6 text-center md:w-3/5">

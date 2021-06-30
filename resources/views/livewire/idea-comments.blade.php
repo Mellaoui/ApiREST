@@ -7,6 +7,9 @@
                                         :ideaUserId="$idea->user->id" />
             @endforeach
         </div>
+        <div class="my-8">
+            {{ $comments->links() }}
+        </div>
      @else   
         <!-- component -->
         <div class="grid place-items-center h-screen">

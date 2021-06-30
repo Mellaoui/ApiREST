@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
+/*Route::get('/', function () {
+    return view('');
 })->name('main-page');
-
+*/
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/community',[IdeaController::class, 'index'])->name('community');
 
-Route::get('/overview',[IdeaController::class,'index'])->name('overview');
+Route::get('/',[IdeaController::class,'index'])->name('overview');
 
 Route::get('/community/single/{idea:slug}',[IdeaController::class,'show'])->name('showIdea');

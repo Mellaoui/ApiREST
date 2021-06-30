@@ -21,8 +21,10 @@ module.exports = {
                 'gray-background':'#f7f8fc',
                 'blue':'#328af1',
                 'blue-hover':'#2879db',
+                'blue-50':'#a3b6e5',
                 'yellow': '#ffc73C',
                 'red-100':'#fee2e2',
+                'red-50':'#FEF2F2',
                 'red':'#ec454f',
                 'green': '#1aab8b',
                 'purple': '#8b60ed'

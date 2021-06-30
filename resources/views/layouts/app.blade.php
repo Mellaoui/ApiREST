@@ -19,10 +19,11 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
     </head>
     <body class="font-sans bg-gray-background antialiased"> 
         <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4"> 
-                <a href={{ route('main-page') }} class="font-bold text-2xl"> Molabs</a>
+                <a href={{ route('overview') }} class="font-bold text-2xl"> Molabs</a>
                 <div class="flex items-center mt-2 md:mt-0">
                     <div class="px-6 py-4">
                         @if (Route::has('login'))
