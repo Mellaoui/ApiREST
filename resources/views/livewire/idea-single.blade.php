@@ -12,8 +12,9 @@
                         <a href="#" class="mx-2 md:mx-4 hover:underline">{{ $idea->title }}</a>
                     </h4>
                     <div class=" mx-2 md:mx-4 text-gray-600 mt-3">
-                    {{ $idea->description }}
+                    {!! $idea->description !!}
                     </div>
+                    
                    
                     <div class="flex md:items-center flex-col md:flex-row justify-between mt-6">
                         <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">        

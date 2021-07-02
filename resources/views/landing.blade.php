@@ -171,6 +171,36 @@
       .browser-mockup > * {
         display: block;
       }
+
+      /*splash screen*/
+
+      .logo{
+        position: relative;
+        display: inline-block;
+        bottom: -20px;
+        opacity: 0;
+      }
+
+      .logo.active{
+         bottom: 0;
+         opacity: 1;
+         transition: ease-in-out 0.5s;
+      }
+
+      .logo.fade{
+        bottom: 150px;
+        opacity: 0;
+        transition: ease-in-out 0.5s;
+      }
+
+      .intro{
+        height: 100vh;
+      }
+
+      .intro.done{
+        top: -100vh;
+        opacity: 1;
+      }
     
     </style>
   </head>
@@ -179,6 +209,12 @@
 
 
   <body class="flex flex-col leading-relaxed tracking-wide gradient" x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak>
+
+    <div class="intro  z-20 bg-black flex justify-center items-center duration-100">
+      <h1 class="logo-intro text-4xl font-bold">
+        <span class="logo text-white ">Mo</span><span class="logo text-white">Labs</span>
+      </h1>
+    </div>
     <!--Nav-->
     <nav id="header" class="top-0 z-30 w-full py-1 text-white lg:py-6">
       <div
@@ -1130,6 +1166,42 @@
         }
         return false;
       }
+
+
+
+
+      /*splash screen*/
+
+   
+      let logoSpan = document.querySelectorAll('.intro');
+
+
+      window.addEventListener('DOMContentLoaded', ()=>{
+
+        setTimeout(() => {
+          
+          logoSpan.forEach((span,idx)=>{
+            setTimeout(() => {
+              span.classList.add('active');
+            }, (idx+1)* 500);
+          });
+
+          setTimeout(() => {
+              logoSpan.forEach((span,idx)=>{
+                setTimeout(()=> {
+                  span.classList.remove('active');
+                  span.classList.add('fade');
+                  div.classList.add('done');
+                },(idx+1)*500)  
+              })
+            },2000);
+
+            setTimeout(() => {
+                intro.classList.add('done');
+            }, 4000);
+        },);
+
+      })
     </script>
   </body>
 </html>

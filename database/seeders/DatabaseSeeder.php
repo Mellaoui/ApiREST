@@ -52,7 +52,6 @@ class DatabaseSeeder extends Seeder
                         'idea_id'=> $idea_id
                     ]);
                 }
-               
             }
         }
 

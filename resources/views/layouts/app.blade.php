@@ -12,14 +12,16 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        
 
+        <link rel="stylesheet" href="{{ asset('css/trix.css') }}">
+        
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="{{ asset('js/trix.js') }}"></script>
     </head>
     <body class="font-sans bg-gray-background antialiased"> 
         <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4"> 
@@ -60,13 +62,13 @@
                     <div class="text-center px-6 py-2 pt-6">
                         <h3 class="font-semibold text-base">Add an idea</h3>
                         @auth
-                             <p class="text-xs mt-4"> Let us know what you would like and we'll take a look</p>
+                            <p class="text-xs mt-4"> Let us know what you would like and we'll take a look</p>
                          @else  
-                         <p class="text-xs mt-4"> Please Login in to Start Discussion</p> 
+                            <p class="text-xs mt-4"> Please Login in to Start Discussion</p> 
                         @endauth
                     </div>
                         @auth
-                         <livewire:create-idea />
+                         <livewire:create-idea  />
                         @else
                         <div class="my-6 text-center">
                             <a href="{{ route('login') }}" class="inline-block justify-center my-2 w-1/2 h-11 text-xs bg-blue text-white font-semibold rounded-xl border-gray-200 hover:border-gray-400 hover:to-blue-hover transition duration-150 ease-in px-6 py-3">
@@ -89,4 +91,5 @@
         <livewire:scripts />
         
     </body>
+    
 </html>

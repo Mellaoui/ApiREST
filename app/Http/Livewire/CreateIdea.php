@@ -4,15 +4,21 @@ namespace App\Http\Livewire;
 
 use App\Models\Category;
 use App\Models\Idea;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateIdea extends Component
 {
     
+    use WithFileUploads;
+
     public $title;
     public $category = 1;
     public $description;
+    public $ideas;
+  
 
     protected $rules = [
         'title' => 'required|min:4',
@@ -20,12 +26,19 @@ class CreateIdea extends Component
         'description' => 'required|min:4',
     ];
 
-    public function createIdea()
-    {
-        if (auth()->check()) {
-            $this->validate();
 
-           $results= Idea::create([
+    public function createIdea(Request $request)
+    {
+        
+        if (auth()->check()) {
+           
+             $this->validate([
+                'title' => 'required|min:4',
+                'category' => 'required|integer|exists:categories,id',
+                'description' => 'required|min:4',
+            ]);
+
+           Idea::create([
                 'user_id' => auth()->id(),
                 'category_id' => $this->category,
                 'status_id' => 1,
@@ -33,6 +46,8 @@ class CreateIdea extends Component
                 'description' => $this->description,
             ]);
 
+            
+        
             session()->flash('success_message', 'Idea was added successfully.');
 
             $this->reset();
