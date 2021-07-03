@@ -5,6 +5,7 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Idea extends Model
 {
@@ -81,5 +82,14 @@ class Idea extends Model
         //Vote::where('idea_id',$this->id)->where('user_id',$user->id)->first()->delete();
         $this->votes()->detach($user);
     }
+
+    public function getImage(){
+        return $this->image 
+            ?
+         Storage::disk('images')->url($this->image)
+            : 
+         '';
+    }
+
 
 }

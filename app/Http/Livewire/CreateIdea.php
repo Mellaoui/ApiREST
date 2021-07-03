@@ -6,6 +6,8 @@ use App\Models\Category;
 use App\Models\Idea;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
+use Jorenvh\Share\Share;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -17,7 +19,8 @@ class CreateIdea extends Component
     public $title;
     public $category = 1;
     public $description;
-    public $ideas;
+    public $newImage;
+
   
 
     protected $rules = [
@@ -26,6 +29,7 @@ class CreateIdea extends Component
         'description' => 'required|min:4',
     ];
 
+   
 
     public function createIdea(Request $request)
     {
@@ -36,7 +40,10 @@ class CreateIdea extends Component
                 'title' => 'required|min:4',
                 'category' => 'required|integer|exists:categories,id',
                 'description' => 'required|min:4',
+                'newImage' => 'image|max:1000'
             ]);
+
+            $filename =  $this->newImage->store('/','images');
 
            Idea::create([
                 'user_id' => auth()->id(),
@@ -44,9 +51,12 @@ class CreateIdea extends Component
                 'status_id' => 1,
                 'title' => $this->title,
                 'description' => $this->description,
+                'image' => $filename,
             ]);
 
-            
+           
+           
+            //Share::currentPage()->facebook();
         
             session()->flash('success_message', 'Idea was added successfully.');
 

@@ -24,3 +24,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/community',[IdeaControlle
 Route::get('/',[IdeaController::class,'index'])->name('overview');
 
 Route::get('/community/single/{idea:slug}',[IdeaController::class,'show'])->name('showIdea');
+
