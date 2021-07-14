@@ -43,7 +43,7 @@ class="flex transition duration-150 ease-in bg-white cursor-pointer idea-contain
             <div class="flex mt-3 text-gray-600">
                 {!! $idea->description !!}
             </div>
-            <!--<img src={{ $idea->getImage()}}>-->
+            <img src={{ $idea->getImage()}}>
             <div class="flex flex-col justify-between mt-6 md:flex-row md:items-center">
                 <div class="flex items-center space-x-2 text-xs font-semibold text-gray-400">
                     <div>{{ $idea->created_at->diffForHumans() }}</div>

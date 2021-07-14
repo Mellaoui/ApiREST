@@ -540,14 +540,14 @@
           </div>
           <div class="w-full p-6 mt-6 sm:w-1/2">
             <div class="align-middle">
-              <h3 class="mb-3 text-xl font-bold leading-none text-gray-800">
-                M V P
+              <h3 class="mb-3 text-2xl font-bold leading-none text-gray-800">
+                SEO / Marketing
               </h3>
-              <p class="mb-8 text-gray-600">
-                M V P is minimum valuable <br /><br />
-                Images from:
-                <a class="text-orange-500 underline" href="https://undraw.co/"
-                  >undraw.co</a
+              <p class="mb-8 text-xl text-gray-600">
+                We will help you rank on Search Engine results By improving<br /><br />
+
+                <a class="text-orange-500 underline" href="#"
+                  ></a
                 >
               </p>
             </div>
