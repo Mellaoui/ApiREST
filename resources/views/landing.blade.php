@@ -128,29 +128,46 @@
 
 				<!-- content -->
 
-				<div class="my-8">
-                    <div class="flex flex-col pb-6 md:pb-0"><label for="name" class="mb-2 text-base input-label">Company name</label><div class="flex-1 leading-none"><input id="handle" type="text" class="w-full p-0 placeholder-blue no-outline text-dusty-blue-darker" name="handle" placeholder="....."></div></div>
+				<div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input type="text" class="relative flex-1 flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow" placeholder="Company name">
                 </div>
-				<div class="my-8">
-                    <div class="flex flex-col pb-6 md:pb-0"><label for="name" class="mb-2 text-base input-label"> Your name</label><div class="flex-1 leading-none"><input id="handle" type="text" class="w-full p-0 placeholder-blue no-outline text-dusty-blue-darker" name="handle" placeholder="....."></div></div>
+				<div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input type="text" class="relative flex-1 flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow" placeholder="Full name">
                 </div>
-				<div class="my-8">
-                    <div class="flex flex-col pb-6 md:pb-0"><label for="name" class="mb-2 text-base input-label">Phone</label><div class="flex-1 leading-none"><input id="handle" type="text" class="w-full p-0 placeholder-blue no-outline text-dusty-blue-darker" name="handle" placeholder="....."></div></div>
+				<div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input type="text" class="relative flex-1 flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow" placeholder="Email">
                 </div>
-				<div class="my-8">
-                    <div class="flex flex-col pb-6 md:pb-0"><label for="name" class="mb-2 text-base input-label">Email</label><div class="flex-1 leading-none"><input id="handle" type="text" class="w-full p-0 placeholder-blue no-outline text-dusty-blue-darker" name="handle" placeholder="....."></div></div>
+				<div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input type="text" class="relative flex-1 flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow" placeholder="Phone with country code">
                 </div>
                 <div class="flex flex-col">
                     <p> What Can We do for you ?</p>
                     <label class="inline-flex items-center mt-3">
                         <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">Create Amazing new Product</span>
                     </label>
-
+                    <label class="inline-flex items-center mt-3">
+                        <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">SEO Optimization</span>
+                    </label>
+                    <label class="inline-flex items-center mt-3">
+                        <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">M V P</span>
+                    </label>
                 </div>
 				<!--Footer-->
 				<div class="flex justify-end pt-2">
-					<button class="p-3 px-4 mr-2 text-indigo-500 bg-transparent rounded-lg hover:bg-gray-100 hover:text-indigo-400" @click="alert('Additional Action');">Action</button>
-					<button class="p-3 px-4 text-white bg-indigo-500 rounded-lg modal-close hover:bg-indigo-400" @click="showModal = false">Close</button>
+					<button class="p-3 px-4 mr-2 text-gray-800 bg-transparent rounded-lg gradient2 hover:bg-gray-100 disabled" @click="alert('Additional Action');">Submit</button>
+					<button class="p-3 px-4 text-white bg-black rounded-lg modal-close hover:bg-blue-hover disabled" @click="showModal = false">Close</button>
 				</div>
 
 
@@ -546,6 +563,27 @@
               <p class="mb-8 text-xl text-gray-600">
                 We will help you rank on Search Engine results By improving<br /><br />
 
+                <div class="flex flex-col">
+                    <p class="mb-2 text-xl text-gray-600">
+                         we specialized in:<br />
+                    </p>
+
+                    <br />
+
+                    <a class="flex text-orange-500 underline text-blue">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        Wordpress Development
+                    </a>
+                    <a class="flex text-orange-500 underline text-blue">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        Woocommerce
+                    </a>
+                    <a class="flex text-orange-500 underline text-blue">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        Shopify
+                    </a>
+
+                </div>
                 <a class="text-orange-500 underline" href="#"
                   ></a
                 >
@@ -745,6 +783,14 @@
           </div>
         </div>
       </div>
+      <div class="flex items-center justify-center">
+
+        <a href="https://www.upwork.com/workwith/mellaouimohamed" class="inline-flex px-2 pt-6 text-blue-500">Built with
+            <svg fill="#e53e3e" viewBox="0 0 24 24"  class="w-5 h-5 pt-px mx-1 text-red-600" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>by Mohammed elghazali Mellaoui.</a>
+      </div>
+
     </footer>
 
     <script>
