@@ -43,7 +43,7 @@ class CreateIdea extends Component
                 'newImage' => 'image|max:1000'
             ]);
 
-            $filename =  $this->newImage->store('/','images');
+            $newImage =  $this->newImage->store('/','images');
 
            Idea::create([
                 'user_id' => auth()->id(),
@@ -51,7 +51,7 @@ class CreateIdea extends Component
                 'status_id' => 1,
                 'title' => $this->title,
                 'description' => $this->description,
-                'image' => $filename,
+                'image' => $newImage,
             ]);
 
            

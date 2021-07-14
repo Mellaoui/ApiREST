@@ -21,7 +21,7 @@
                         <div class="rounded-full border bg-gray-100 px-3 py-1">Author</div>
                         <div>&bull;</div>
                     @endif
-                    <div>{{ $comment->created_at->diffForHumans() }}</div>
+                    <div wire:poll.visible>{{ $comment->created_at->diffForHumans() }}</div>
                 </div>
                 <div class="flex items-center space-x-2">
                     <button class="relative bg-gray-100 hover:bg-gray-200 border rounded-full h-7 transition duration-150 ease-in py-2 px-3">

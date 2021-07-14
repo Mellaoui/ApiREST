@@ -66,7 +66,7 @@
 .colored-toast .swal2-title {
     color: white;
 }
-    
+
 .colored-toast.swal2-icon-error {
     background-color: #EF4444 !important;
 }
@@ -82,7 +82,9 @@
 .colored-toast .swal2-close {
     color: white;
 }
-  
+
 .colored-toast .swal2-content {
     color: white;
 }
+
+

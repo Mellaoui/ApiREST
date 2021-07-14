@@ -10,7 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable 
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
@@ -59,15 +59,18 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function ideas(){
+    public function ideas()
+    {
         return $this->hasMany(Idea::class);
     }
 
-    public function votes(){
+    public function votes()
+    {
         return $this->belongsToMany(Idea::class,'votes');
     }
-    
-    public function getAvatar(){
+
+    public function getAvatar()
+    {
         return 'https://www.gravatar.com/avatar/'.md5($this->email).'?s=60'.'&d=mp';
     }
 
@@ -76,7 +79,8 @@ class User extends Authenticatable
        return $this->hasMany(Comment::class);
     }
 
-    public function IsAdmin(){
+    public function IsAdmin()
+    {
 
         return in_array($this->email,
         [
