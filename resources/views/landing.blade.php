@@ -561,7 +561,7 @@
                 SEO / Marketing
               </h3>
               <p class="mb-8 text-xl text-gray-600">
-                We will help you rank on Search Engine results By improving<br /><br />
+                We will help you rank on Search Engine results By improving your SEO<br /><br />
 
                 <div class="flex flex-col">
                     <p class="mb-2 text-xl text-gray-600">
