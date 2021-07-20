@@ -84,11 +84,11 @@ class Idea extends Model
     }
 
     public function getImage(){
-        return $this->image 
+        return $this->image
             ?
          Storage::disk('images')->url($this->image)
-            : 
-         '';
+            :
+         'Has no image';
     }
 
 

@@ -66,11 +66,20 @@
               display: flex;
 
             }
-
+            #responsive{
+              list-style: none;
+              color: #f4f4f4;
+              margin: 0;
+              padding: 0;
+              display: flex;
+            }
             #navcontent.active{
               color: rgb(19, 18, 18);
             }
 
+            #responsive.active{
+              color: rgb(19, 18, 18);
+            }
             #nav-link{
               --spacing: 1em;
                 text-decoration: none;
@@ -174,7 +183,7 @@
           </style>
     </head>
     <body x-data="{ showModal: false }" class="flex flex-col leading-relaxed tracking-wide gradient" style="overflow:scroll">
-        <div class="font-sans antialiased text-gray-900">
+        <div class="font-sans antialiased text-gray-900 main">
             {{ $slot }}
         </div>
     </body>
