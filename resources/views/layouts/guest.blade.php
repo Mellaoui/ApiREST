@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="keywords" content="developer on demand, Laravel, mobile app development">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -182,7 +183,7 @@
 
           </style>
     </head>
-    <body x-data="{ showModal: false }" class="flex flex-col leading-relaxed tracking-wide gradient" style="overflow:scroll">
+    <body x-data="{ showModal: false }" class="flex flex-col leading-relaxed tracking-wide gradient" >
         <div class="font-sans antialiased text-gray-900 main">
             {{ $slot }}
         </div>
