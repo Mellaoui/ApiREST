@@ -27282,6 +27282,10 @@ select {
   color: white;
 }
 
+/*sidebar mobile*/
+
+/*end sidebar */
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -158911,3 +158915,4 @@ select {
     -webkit-line-clamp: unset;
   }
 }
+
