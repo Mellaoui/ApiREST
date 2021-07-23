@@ -12,23 +12,29 @@
             </div>
             <!--responsive nav menu-->
             <div :class="{'flex flex-col items-center justify-center': open, 'hidden': ! open}" class="hidden sm:hidden">
-                <ul id="responsive" class="flex flex-col items-center justify-end flex-1 list-reset lg:flex">
-                    <li class="mr-3">
-                        <a id="nav-link" class="inline-block px-4 py-2 text-lg no-underline" href="#">Home</a>
+                <ul id="responsive" class="flex flex-col items-center flex-1 list-reset lg:flex">
+                    <li class="">
+                        <a id="nav-link" class="inline-block text-lg no-underline" href="#">Home</a>
                     </li>
-                    <li class="mr-3">
-                        <a id="nav-link" class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline" href="{{ route('our-tech') }}">Services</a>
+                    <li class="">
+                        <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline" href="{{ route('our-tech') }}">Services</a>
                     </li>
-                    <li class="mr-3">
-                        <a onclick="scrollTodiv()" id="nav-link" class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline" href="#technologies">Technologies</a>
+                    <li class="">
+                        <a onclick="scrollTodiv()" id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline" href="#technologies">Technologies</a>
                     </li>
-                    <li class="mr-3">
-                        <a id="nav-link" class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline" href={{ route('overview') }}>Our Community</a>
+                    <li class="">
+                        <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline" href={{ route('overview') }}>Our Community</a>
+                    </li>
+                    <li class="">
+                        <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="">
+                        <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline" href="{{ route('register') }}">Register</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="block pr-4 lg:hidden">
+            <div class="flex lg:hidden">
                 <button @click="open = ! open" id="nav-toggle" class="flex items-center px-3 py-2 text-gray-500 border border-gray-600 rounded appearance-none hover:text-gray-800 hover:border-green-500 focus:outline-none">
                     <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -54,10 +60,10 @@
                     </li>
                 </ul>
                 <div id="" class="flex justify-end space-x-3 text-gray-800">
-                    <a href={{ route('login') }} id="login" class="px-8 py-3 mx-auto font-extrabold rounded shadow button opacity-80 hover:underline">
+                    <a href={{ route('login') }} id="login" class="px-8 py-3 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow opacity-90 hover:scale-110 button hover:underline">
                         Login
                     </a>
-                    <a href={{ route('register') }} id="register" class="px-8 py-3 mx-auto font-extrabold rounded shadow button opacity-80 hover:underline">
+                    <a href={{ route('register') }} id="register" class="px-8 py-3 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow opacity-90 hover:scale-110 button hover:underline">
                         Register
                     </a>
                 </div>
@@ -89,7 +95,7 @@
                     We are a leading application development company based in Algeria. Molabs helps businesses and individuals develop professional mobile and web applications using cutting edge technologies to ensure customer satisfaction.
                 </p>
 
-                <a @click="showModal = true" href="#" class="z-50 px-8 py-3 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow hover:scale-110 button opacity-80 hover:underline">
+                <a @click="showModal = true" href="#" class="z-50 px-8 py-3 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow hover:scale-110 button hover:underline">
                     Hire Molabs
                 </a>
 
@@ -110,7 +116,7 @@
 
                 <!--Title-->
                 <div class="flex items-center justify-between pb-3">
-                    <p class="text-2xl font-bold">Lets Talk!</p>
+                    <p class="text-2xl font-bold">Let's Talk!</p>
                     <div class="z-50 cursor-pointer" @click="showModal = false">
                         <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                             <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
@@ -144,24 +150,23 @@
                     </div>
                     <input type="text" class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow" placeholder="Phone with country code">
                 </div>
-                <div class="flex flex-col">
-                    <p> What Can We do for you ?</p>
-                    <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">Create Amazing new Product</span>
+                <div class="flex flex-col space-y-2 text-gray-700">
+                    <p>How can we help you?</p>
+                    <label class="inline-flex items-center space-x-2">
+                        <input type="checkbox" class="w-5 h-5 text-gray-700 form-checkbox" checked><span class="">Create Application</span>
                     </label>
-                    <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">SEO Optimization</span>
+                    <label class="inline-flex items-center space-x-2">
+                        <input type="checkbox" class="w-5 h-5 text-gray-700 form-checkbox" checked><span class="">Optimize SEO</span>
                     </label>
-                    <label class="inline-flex items-center mt-3">
-                        <input type="checkbox" class="w-5 h-5 text-gray-600 form-checkbox" checked><span class="ml-2 text-gray-700">M V P</span>
+                    <label class="inline-flex items-center space-x-2">
+                        <input type="checkbox" class="w-5 h-5 text-gray-700 form-checkbox" checked><span class="">MVP</span>
                     </label>
                 </div>
                 <!--Footer-->
-                <div class="flex justify-end pt-2">
-                    <button class="p-3 px-4 mr-2 text-gray-800 bg-transparent rounded-lg gradient2 hover:bg-gray-100 disabled" @click="alert('Additional Action');">Submit</button>
-                    <button class="p-3 px-4 text-white bg-black rounded-lg modal-close hover:bg-blue-hover disabled" @click="showModal = false">Close</button>
+                <div class="flex justify-end pt-2 space-x-3">
+                    <button class="px-4 py-3 rounded-lg hover:underline button" @click="alert('Additional Action');">Submit</button>
+                    <button class="px-4 py-3 text-white bg-black rounded-lg hover:bg-blue-hover" @click="showModal = false">Close</button>
                 </div>
-
 
             </div>
             <!--/Dialog -->
@@ -460,9 +465,9 @@
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col w-full mb-12 text-center">
                 <h2 class="w-full my-2 text-3xl font-black leading-tight text-center text-white">
-                    Subscribe to our News Letter
+                    Subscribe to our Newsletter
                 </h2>
-                <p class="mx-auto text-base leading-relaxed text-white lg:w-2/3">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep.</p>
+                <p class="mx-auto text-base leading-relaxed text-white lg:w-2/3">In Molabs, we write to our friends every few weeks with new interresting stuff.</p>
             </div>
 
             <div>
@@ -476,7 +481,7 @@
                         <label for="email" class="text-sm leading-7 text-gray-100">Email</label>
                         <input type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200">
                     </div>
-                    <button type="submit" class="px-8 py-2 text-lg text-gray-900 border-0 rounded gradient2 focus:outline-none hover:bg-yellow">Subscribe</button>
+                    <button type="submit" class="px-8 py-2 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow hover:scale-110 button hover:underline">Subscribe</button>
                 </form>
             </div>
 
@@ -558,7 +563,7 @@
             <a href="https://www.upwork.com/workwith/mellaouimohamed" class="inline-flex px-2 pt-6 text-blue-500">Built with
                 <svg fill="#e53e3e" viewBox="0 0 24 24" class="w-5 h-5 pt-px mx-1 text-red-600" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>by Mohammed elghazali Mellaoui.</a>
+                </svg>by Mohammed Elghazali Mellaoui.</a>
         </div>
 
     </footer>
