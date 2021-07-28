@@ -14,13 +14,14 @@ module.exports = {
             colors:{
                 transparent: 'transparent',
                 current: 'currentColor',
-          
+
                 black: colors.black,
                 white: colors.white,
                 gray: colors.trueGray,
                 'gray-background':'#f7f8fc',
                 'blue':'#328af1',
                 'blue-hover':'#2879db',
+                'bg-green-900': '#011d26',
                 'blue-50':'#a3b6e5',
                 'yellow': '#ffc73C',
                 'red-100':'#fee2e2',
@@ -35,7 +36,7 @@ module.exports = {
                 175: '43.7rem'
             },
             maxWidth:{
-                custom: '68.5rem' 
+                custom: '68.5rem'
             },
             boxShadow:{
                 card: '4px 4px 15px 0 rgba(36, 37, 38, 0.08)',
@@ -47,6 +48,30 @@ module.exports = {
             fontSize:{
                 xxs:['0.625rem',{lineHeight:'1rem'}],
             },
+            keyframes: {
+                'reveal': {
+                  '0%, 100%': {
+                    opacity: 0,
+                  },
+                  '10%': {
+                    'background-size': '0% 100%',
+                    opacity: 0,
+                  },
+                  '15%': {
+                    opacity: 1,
+                  },
+                  '30%': {
+                    'background-size': '200% 100%',
+                  },
+                  '90%': {
+                    'background-size': '200% 100%',
+                    opacity: 1,
+                  },
+                },
+              },
+            animation: {
+                'reveal': 'reveal 8s ease-in-out infinite',
+            },
         },
     },
 
@@ -57,7 +82,7 @@ module.exports = {
     },
 
     plugins: [
-        require('@tailwindcss/forms'), 
+        require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/line-clamp'),
     ],

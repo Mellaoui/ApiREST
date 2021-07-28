@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmailistController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\QueryController;
 use App\Mail\CustomerEmail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -52,3 +53,5 @@ Route::get('/email', function () {
 
 });
 
+
+Route::post('/query',[QueryController::class,'store'])->name('query');
