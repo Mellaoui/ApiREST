@@ -74,7 +74,7 @@
         </div>
 
     </nav>
-        <div class="-mt-32 overflow-hidden text-gray-300 bg-green-900 lg:px-16 pt-44">
+        <div class="w-full -mt-32 overflow-hidden text-gray-300 bg-green-900 2xl:px-44 pt-44">
 
             <div class="px-4 pt-16 pb-16 mx-auto max-w-container sm:px-6 lg:px-8 lg:pt-9 xl:pt-20">
                 <div class="sm:mb-24 xl:mb-32 lg:flex">
