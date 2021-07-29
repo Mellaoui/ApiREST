@@ -28,7 +28,8 @@ module.exports = {
                 'red-50':'#FEF2F2',
                 'red':'#ec454f',
                 'green': '#1aab8b',
-                'purple': '#8b60ed'
+                'purple': '#8b60ed',
+                teal: colors.teal,
             },
             spacing: {
                 22: '5.5rem',
