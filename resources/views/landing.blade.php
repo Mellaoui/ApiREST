@@ -191,524 +191,518 @@
                         <li class="">
                             <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
                                 href="{{ route('our-tech') }}">Services</a>
-                        </li>
-                        <li class="">
-                            <a onclick="scrollTodiv()" id="nav-link"
-                                class="inline-block no-underline hover:text-gray-800 hover:text-underline"
-                                href="#technologies">Technologies</a>
-                        </li>
-                        <li class="">
-                            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
-                                href={{ route('overview') }}>Our Community</a>
-                        </li>
-                        <li class="">
-                            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
-                                href="{{ route('login') }}">Login</a>
-                        </li>
-                        <li class="">
-                            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
-                                href="{{ route('register') }}">Register</a>
-                        </li>
-                    </ul>
-                </div>
+        </li>
+        <li class="">
+            <a onclick="scrollTodiv()" id="nav-link"
+                class="inline-block no-underline hover:text-gray-800 hover:text-underline"
+                href="#technologies">Technologies</a>
+        </li>
+        <li class="">
+            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
+                href={{ route('overview') }}>Our Community</a>
+        </li>
+        <li class="">
+            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
+                href="{{ route('login') }}">Login</a>
+        </li>
+        <li class="">
+            <a id="nav-link" class="inline-block no-underline hover:text-gray-800 hover:text-underline"
+                href="{{ route('register') }}">Register</a>
+        </li>
+        </ul>
+    </div>
 
-                <div class="flex lg:hidden">
-                    <button @click="open = ! open" id="nav-toggle"
-                        class="flex items-center px-3 py-2 text-gray-500 border border-gray-600 rounded appearance-none hover:text-gray-800 hover:border-green-500 focus:outline-none">
-                        <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                            <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+    <div class="flex lg:hidden">
+        <button @click="open = ! open" id="nav-toggle"
+            class="flex items-center px-3 py-2 text-gray-500 border border-gray-600 rounded appearance-none hover:text-gray-800 hover:border-green-500 focus:outline-none">
+            <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
 
 
+    <div class="z-20 flex-grow hidden w-full p-4 mt-2 text-black lg:flex lg:items-center lg:w-auto lg:mt-0 lg:p-0">
+        <ul id="navcontent" class="justify-center flex-1 mx-auto list-reset lg:flex">
+            <li class="">
+                <a id="nav-link" class="inline-block px-4 py-2 no-underline" href="#">Home</a>
+            </li>
+            <li class="">
+                <a id="nav-link" class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
+                    href="{{ route('our-tech') }}">Services</a>
+            </li>
+            <li class="">
+                <a onclick="scrollTodiv()" id="nav-link"
+                    class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
+                    href="#technologies">Technologies</a>
+            </li>
+            <li class="">
+                <a id="nav-link" class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
+                    href={{ route('overview') }}>Our Community</a>
+            </li>
+        </ul>
+        <div id="" class="flex justify-end space-x-3 text-gray-800">
+            <a href={{ route('login') }} id="login"
+                class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">
+                Login
+            </a>
+            <a href={{ route('register') }} id="register"
+                class="px-4 py-3 text-sm font-semibold text-gray-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
+                Register
+            </a>
+        </div>
+    </div>
+    </div>
+
+    </nav> --}}
+
+    <div class="w-full -mt-32 overflow-hidden text-gray-300 bg-green-900 2xl:px-44 pt-44">
+
+        <div class="px-4 pt-16 pb-16 mx-auto max-w-container sm:px-6 lg:px-8 lg:pt-9 xl:pt-20">
+            <div class="sm:mb-24 xl:mb-32 lg:flex">
                 <div
-                    class="z-20 flex-grow hidden w-full p-4 mt-2 text-black lg:flex lg:items-center lg:w-auto lg:mt-0 lg:p-0">
-                    <ul id="navcontent" class="justify-center flex-1 mx-auto list-reset lg:flex">
-                        <li class="">
-                            <a id="nav-link" class="inline-block px-4 py-2 no-underline" href="#">Home</a>
-                        </li>
-                        <li class="">
-                            <a id="nav-link"
-                                class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
-                                href="{{ route('our-tech') }}">Services</a>
-                        </li>
-                        <li class="">
-                            <a onclick="scrollTodiv()" id="nav-link"
-                                class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
-                                href="#technologies">Technologies</a>
-                        </li>
-                        <li class="">
-                            <a id="nav-link"
-                                class="inline-block px-4 py-2 no-underline hover:text-gray-800 hover:text-underline"
-                                href={{ route('overview') }}>Our Community</a>
-                        </li>
-                    </ul>
-                    <div id="" class="flex justify-end space-x-3 text-gray-800">
-                        <a href={{ route('login') }} id="login"
-                            class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">
-                            Login
-                        </a>
-                        <a href={{ route('register') }} id="register"
-                            class="px-4 py-3 text-sm font-semibold text-gray-300 bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">
-                            Register
-                        </a>
+                    class="relative z-10 flex flex-col items-start flex-none w-auto mx-auto mb-12 lg:pt-10 lg:max-w-2xl lg:mx-0 lg:pr-20 sm:mb-16 lg:mb-0">
+                    <h1 class="order-1 mb-4 text-3xl font-extrabold leading-relaxed text-white sm:text-5xl">
+                        <span class="leading-relaxed text-teal-400 ">Dedicated team,</span>for building your mobile
+                        and web applications
+                    </h1>
+                    <p class="mb-4 text-sm font-semibold tracking-wide uppercase">E-commerce, Messaging, Socialmedia
+                        Networking, B2B & B2C</p>
+                    <p class="order-2 mb-8 leading-relaxed">We are a leading application development company based
+                        in Algeria. Molabs helps businesses and individuals develop professional mobile and web
+                        applications using cutting edge technologies to ensure customer satisfaction.</p>
+                    <dl class="flex items-center order-1 mb-4 text-xs font-semibold tracking-wide uppercase">
+                        <dt class="sr-only">All technologies include</dt>
+                        <dd class="flex items-center">
+                            <svg viewBox="0 0 25 27" width="25" height="27" fill="none" class="flex-none mr-2">
+                                <g filter="url(#html-logo-filter)">
+                                    <path d="M1 .85h22.5l-2 20.5-9.25 4-9.25-4L1 .85z" stroke="#4B5563"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                <path d="M16.5 5.85H8v5.5h8.5v6l-4.25 2-4.25-2v-2.5" stroke="#9CA3AF" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                <defs>
+                                    <filter id="html-logo-filter" x=".25" y="-.899" width="24" height="27"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                        </feBlend>
+                                        <feColorMatrix in="SourceAlpha"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                        </feColorMatrix>
+                                        <feOffset dy="-1"></feOffset>
+                                        <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
+                                        </feComposite>
+                                        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
+                                        </feColorMatrix>
+                                        <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            HTML
+                        </dd>
+                        <dd class="flex items-center ml-6">
+                            <svg viewBox="0 0 29 29" width="29" height="29" fill="none" class="flex-none mr-2">
+                                <g filter="url(#react-logo-filter-0)">
+                                    <ellipse cx="14.75" cy="14.106" rx="13.25" ry="5.25" stroke="#4B5563"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></ellipse>
+                                </g>
+                                <g filter="url(#react-logo-filter-1)">
+                                    <ellipse cx="14.75" cy="14.099" rx="13.25" ry="5.25"
+                                        transform="rotate(-60 14.75 14.1)" stroke="#4B5563" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></ellipse>
+                                </g>
+                                <g filter="url(#react-logo-filter-2)">
+                                    <ellipse cx="14.75" cy="14.1" rx="13.25" ry="5.25"
+                                        transform="rotate(-120 14.75 14.1)" stroke="#4B5563" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round"></ellipse>
+                                </g>
+                                <circle cx="14.75" cy="14.106" r="2" fill="#1F2937" stroke="#9CA3AF" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round"></circle>
+                                <defs>
+                                    <filter id="react-logo-filter-0" x=".75" y="7.106" width="28" height="13"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                        </feBlend>
+                                        <feColorMatrix in="SourceAlpha"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                        </feColorMatrix>
+                                        <feOffset dy="-1"></feOffset>
+                                        <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
+                                        </feComposite>
+                                        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
+                                        </feColorMatrix>
+                                        <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                                    </filter>
+                                    <filter id="react-logo-filter-1" x="5.964" y=".575" width="17.572" height="26.047"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                        </feBlend>
+                                        <feColorMatrix in="SourceAlpha"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                        </feColorMatrix>
+                                        <feOffset dy="-1"></feOffset>
+                                        <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
+                                        </feComposite>
+                                        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
+                                        </feColorMatrix>
+                                        <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                                    </filter>
+                                    <filter id="react-logo-filter-2" x="5.964" y=".576" width="17.572" height="26.047"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                        </feBlend>
+                                        <feColorMatrix in="SourceAlpha"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                        </feColorMatrix>
+                                        <feOffset dy="-1"></feOffset>
+                                        <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
+                                        </feComposite>
+                                        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
+                                        </feColorMatrix>
+                                        <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            React
+                        </dd>
+                        <dd class="flex items-center ml-6">
+                            <svg viewBox="0 0 29 25" width="29" height="25" fill="none" class="flex-none mr-2">
+                                <g filter="url(#vue-logo-filter)">
+                                    <title>VueJs</title>
+                                    <path d="M18.25.85l-4 6.5-4-6.5H1l13.25 22.5L27.5.85h-9.25z" stroke="#4B5563"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                <path d="M18.25.85l-4 6.5-4-6.5H6l8.25 13.5L22.5.85h-4.25z" fill="#1F2937"
+                                    stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <defs>
+                                    <filter id="vue-logo-filter" x=".25" y="-.899" width="28" height="25"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                        </feBlend>
+                                        <feColorMatrix in="SourceAlpha"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                        </feColorMatrix>
+                                        <feOffset dy="-1"></feOffset>
+                                        <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
+                                        </feComposite>
+                                        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
+                                        </feColorMatrix>
+                                        <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            Vue
+                        </dd>
+                        <dd class="flex items-center ml-6">
+                            <svg width="29" height="29" viewBox="0 0 84.1 57.6">
+                                <title>laravel</title>
+                                <path fill="#4B5563"
+                                    d="M83.8 26.9c-.6-.6-8.3-10.3-9.6-11.9-1.4-1.6-2-1.3-2.9-1.2s-10.6 1.8-11.7 1.9c-1.1.2-1.8.6-1.1 1.6.6.9 7 9.9 8.4 12l-25.5 6.1L21.2 1.5c-.8-1.2-1-1.6-2.8-1.5C16.6.1 2.5 1.3 1.5 1.3c-1 .1-2.1.5-1.1 2.9S17.4 41 17.8 42c.4 1 1.6 2.6 4.3 2 2.8-.7 12.4-3.2 17.7-4.6 2.8 5 8.4 15.2 9.5 16.7 1.4 2 2.4 1.6 4.5 1 1.7-.5 26.2-9.3 27.3-9.8 1.1-.5 1.8-.8 1-1.9-.6-.8-7-9.5-10.4-14 2.3-.6 10.6-2.8 11.5-3.1 1-.3 1.2-.8.6-1.4zm-46.3 9.5c-.3.1-14.6 3.5-15.3 3.7-.8.2-.8.1-.8-.2-.2-.3-17-35.1-17.3-35.5-.2-.4-.2-.8 0-.8S17.6 2.4 18 2.4c.5 0 .4.1.6.4 0 0 18.7 32.3 19 32.8.4.5.2.7-.1.8zm40.2 7.5c.2.4.5.6-.3.8-.7.3-24.1 8.2-24.6 8.4-.5.2-.8.3-1.4-.6s-8.2-14-8.2-14L68.1 32c.6-.2.8-.3 1.2.3.4.7 8.2 11.3 8.4 11.6zm1.6-17.6c-.6.1-9.7 2.4-9.7 2.4l-7.5-10.2c-.2-.3-.4-.6.1-.7.5-.1 9-1.6 9.4-1.7.4-.1.7-.2 1.2.5.5.6 6.9 8.8 7.2 9.1.3.3-.1.5-.7.6z" />
+                            </svg>
+                            <p class="pl-3">Laravel</p>
+                        </dd>
+                    </dl>
+                    <div class="grid order-2 w-full grid-cols-1 gap-3 text-center sm:flex sm:gap-0 sm:space-x-6">
+                        <a @click="showModal = true" href="#"
+                            class="px-4 py-3 text-sm font-semibold text-gray-900 duration-300 bg-white rounded-lg transform-gpu hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Hire
+                            Molabs</a>
+                        <a href="{{ route('our-tech') }}"
+                            class="px-4 py-3 text-sm font-semibold text-gray-300 duration-300 bg-gray-800 rounded-lg transform-gpu hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Browse
+                            Examples</a>
                     </div>
                 </div>
-            </div>
 
-        </nav> --}}
+                <div class="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-32">
 
-        <div class="w-full -mt-32 overflow-hidden text-gray-300 bg-green-900 2xl:px-44 pt-44">
-
-            <div class="px-4 pt-16 pb-16 mx-auto max-w-container sm:px-6 lg:px-8 lg:pt-9 xl:pt-20">
-                <div class="sm:mb-24 xl:mb-32 lg:flex">
-                    <div
-                        class="relative z-10 flex flex-col items-start flex-none w-auto mx-auto mb-12 lg:pt-10 lg:max-w-2xl lg:mx-0 lg:pr-20 sm:mb-16 lg:mb-0">
-                        <h1 class="order-1 mb-4 text-3xl font-extrabold leading-relaxed text-white sm:text-5xl">
-                            <span class="leading-relaxed text-teal-400 ">Dedicated team,</span>for building your mobile
-                            and web applications
-                        </h1>
-                        <p class="mb-4 text-sm font-semibold tracking-wide uppercase">E-commerce, Messaging, Socialmedia
-                            Networking, B2B & B2C</p>
-                        <p class="order-2 mb-8 leading-relaxed">We are a leading application development company based
-                            in Algeria. Molabs helps businesses and individuals develop professional mobile and web
-                            applications using cutting edge technologies to ensure customer satisfaction.</p>
-                        <dl class="flex items-center order-1 mb-4 text-xs font-semibold tracking-wide uppercase">
-                            <dt class="sr-only">All technologies include</dt>
-                            <dd class="flex items-center">
-                                <svg viewBox="0 0 25 27" width="25" height="27" fill="none" class="flex-none mr-2">
-                                    <g filter="url(#html-logo-filter)">
-                                        <path d="M1 .85h22.5l-2 20.5-9.25 4-9.25-4L1 .85z" stroke="#4B5563"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                    <path d="M16.5 5.85H8v5.5h8.5v6l-4.25 2-4.25-2v-2.5" stroke="#9CA3AF"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <defs>
-                                        <filter id="html-logo-filter" x=".25" y="-.899" width="24" height="27"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-                                            </feBlend>
-                                            <feColorMatrix in="SourceAlpha"
-                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
-                                            </feColorMatrix>
-                                            <feOffset dy="-1"></feOffset>
-                                            <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
-                                            </feComposite>
-                                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
-                                            </feColorMatrix>
-                                            <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                HTML
-                            </dd>
-                            <dd class="flex items-center ml-6">
-                                <svg viewBox="0 0 29 29" width="29" height="29" fill="none" class="flex-none mr-2">
-                                    <g filter="url(#react-logo-filter-0)">
-                                        <ellipse cx="14.75" cy="14.106" rx="13.25" ry="5.25" stroke="#4B5563"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></ellipse>
-                                    </g>
-                                    <g filter="url(#react-logo-filter-1)">
-                                        <ellipse cx="14.75" cy="14.099" rx="13.25" ry="5.25"
-                                            transform="rotate(-60 14.75 14.1)" stroke="#4B5563" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></ellipse>
-                                    </g>
-                                    <g filter="url(#react-logo-filter-2)">
-                                        <ellipse cx="14.75" cy="14.1" rx="13.25" ry="5.25"
-                                            transform="rotate(-120 14.75 14.1)" stroke="#4B5563" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></ellipse>
-                                    </g>
-                                    <circle cx="14.75" cy="14.106" r="2" fill="#1F2937" stroke="#9CA3AF"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle>
-                                    <defs>
-                                        <filter id="react-logo-filter-0" x=".75" y="7.106" width="28" height="13"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-                                            </feBlend>
-                                            <feColorMatrix in="SourceAlpha"
-                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
-                                            </feColorMatrix>
-                                            <feOffset dy="-1"></feOffset>
-                                            <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
-                                            </feComposite>
-                                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
-                                            </feColorMatrix>
-                                            <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                        </filter>
-                                        <filter id="react-logo-filter-1" x="5.964" y=".575" width="17.572"
-                                            height="26.047" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-                                            </feBlend>
-                                            <feColorMatrix in="SourceAlpha"
-                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
-                                            </feColorMatrix>
-                                            <feOffset dy="-1"></feOffset>
-                                            <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
-                                            </feComposite>
-                                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
-                                            </feColorMatrix>
-                                            <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                        </filter>
-                                        <filter id="react-logo-filter-2" x="5.964" y=".576" width="17.572"
-                                            height="26.047" filterUnits="userSpaceOnUse"
-                                            color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-                                            </feBlend>
-                                            <feColorMatrix in="SourceAlpha"
-                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
-                                            </feColorMatrix>
-                                            <feOffset dy="-1"></feOffset>
-                                            <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
-                                            </feComposite>
-                                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
-                                            </feColorMatrix>
-                                            <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                React
-                            </dd>
-                            <dd class="flex items-center ml-6">
-                                <svg viewBox="0 0 29 25" width="29" height="25" fill="none" class="flex-none mr-2">
-                                    <g filter="url(#vue-logo-filter)">
-                                        <title>VueJs</title>
-                                        <path d="M18.25.85l-4 6.5-4-6.5H1l13.25 22.5L27.5.85h-9.25z" stroke="#4B5563"
-                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                    <path d="M18.25.85l-4 6.5-4-6.5H6l8.25 13.5L22.5.85h-4.25z" fill="#1F2937"
-                                        stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                    </path>
-                                    <defs>
-                                        <filter id="vue-logo-filter" x=".25" y="-.899" width="28" height="25"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-                                            </feBlend>
-                                            <feColorMatrix in="SourceAlpha"
-                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
-                                            </feColorMatrix>
-                                            <feOffset dy="-1"></feOffset>
-                                            <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1">
-                                            </feComposite>
-                                            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0">
-                                            </feColorMatrix>
-                                            <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                Vue
-                            </dd>
-                            <dd class="flex items-center ml-6">
-                                <svg width="29" height="29" viewBox="0 0 84.1 57.6">
-                                    <title>laravel</title>
-                                    <path fill="#4B5563"
-                                        d="M83.8 26.9c-.6-.6-8.3-10.3-9.6-11.9-1.4-1.6-2-1.3-2.9-1.2s-10.6 1.8-11.7 1.9c-1.1.2-1.8.6-1.1 1.6.6.9 7 9.9 8.4 12l-25.5 6.1L21.2 1.5c-.8-1.2-1-1.6-2.8-1.5C16.6.1 2.5 1.3 1.5 1.3c-1 .1-2.1.5-1.1 2.9S17.4 41 17.8 42c.4 1 1.6 2.6 4.3 2 2.8-.7 12.4-3.2 17.7-4.6 2.8 5 8.4 15.2 9.5 16.7 1.4 2 2.4 1.6 4.5 1 1.7-.5 26.2-9.3 27.3-9.8 1.1-.5 1.8-.8 1-1.9-.6-.8-7-9.5-10.4-14 2.3-.6 10.6-2.8 11.5-3.1 1-.3 1.2-.8.6-1.4zm-46.3 9.5c-.3.1-14.6 3.5-15.3 3.7-.8.2-.8.1-.8-.2-.2-.3-17-35.1-17.3-35.5-.2-.4-.2-.8 0-.8S17.6 2.4 18 2.4c.5 0 .4.1.6.4 0 0 18.7 32.3 19 32.8.4.5.2.7-.1.8zm40.2 7.5c.2.4.5.6-.3.8-.7.3-24.1 8.2-24.6 8.4-.5.2-.8.3-1.4-.6s-8.2-14-8.2-14L68.1 32c.6-.2.8-.3 1.2.3.4.7 8.2 11.3 8.4 11.6zm1.6-17.6c-.6.1-9.7 2.4-9.7 2.4l-7.5-10.2c-.2-.3-.4-.6.1-.7.5-.1 9-1.6 9.4-1.7.4-.1.7-.2 1.2.5.5.6 6.9 8.8 7.2 9.1.3.3-.1.5-.7.6z" />
-                                </svg>
-                                <p class="pl-3">Laravel</p>
-                            </dd>
-                        </dl>
-                        <div class="grid order-2 w-full grid-cols-1 gap-3 text-center sm:flex sm:gap-0 sm:space-x-6">
-                            <a @click="showModal = true" href="#"
-                                class="px-4 py-3 text-sm font-semibold text-gray-900 duration-300 bg-white rounded-lg transform-gpu hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Hire
-                                Molabs</a>
-                            <a href="{{ route('our-tech') }}"
-                                class="px-4 py-3 text-sm font-semibold text-gray-300 duration-300 bg-gray-800 rounded-lg transform-gpu hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Browse
-                                Examples</a>
-                        </div>
-                    </div>
-
-                    <div class="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-32">
-
-                        <svg viewBox="0 0 500 59"
-                            class="w-175 sm:w-[56.25rem] overflow-visible relative lg:absolute lg:top-0 lg:left-0 mx-auto lg:mx-0 mb-[-17%] sm:-mb-44 lg:mb-0">
-                            <defs>
-                                <filter id="hero-drop-shadow">
-                                    <feGaussianBlur in="SourceAlpha" stdDeviation="20"></feGaussianBlur>
-                                    <feOffset dx="0" dy="10" result="offsetblur"></feOffset>
-                                    <feFlood flood-color="rgba(0,0,0,0.25)"></feFlood>
-                                    <feComposite in2="offsetblur" operator="in"></feComposite>
-                                    <feMerge>
-                                        <feMergeNode></feMergeNode>
-                                        <feMergeNode in="SourceGraphic"></feMergeNode>
-                                    </feMerge>
-                                </filter>
-                                <filter id="hero-drop-shadow-2">
-                                    <feGaussianBlur in="SourceAlpha" stdDeviation="6"></feGaussianBlur>
-                                    <feOffset dx="0" dy="3" result="offsetblur"></feOffset>
-                                    <feFlood flood-color="rgba(0,0,0,0.2)"></feFlood>
-                                    <feComposite in2="offsetblur" operator="in"></feComposite>
-                                    <feMerge>
-                                        <feMergeNode></feMergeNode>
-                                        <feMergeNode in="SourceGraphic"></feMergeNode>
-                                    </feMerge>
-                                </filter>
-                                <linearGradient id="hero-gradient" gradientTransform="rotate(90)">
-                                    <stop offset="0%" stop-color="white"></stop>
-                                    <stop offset="80%" stop-color="white" stop-opacity="0.2"></stop>
-                                    <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
-                                </linearGradient>
-                                <mask id="hero-mask">
-                                    <rect x="-32" y="-32" width="964" height="653" fill="url(#hero-gradient)"></rect>
-                                </mask>
-                                <clipPath id="one">
-                                    <rect width="560" height="265" rx="6"></rect>
-                                    <rect width="308" height="218" x="592" rx="6"></rect>
-                                    <rect width="236" height="241" x="592" y="250" rx="6"></rect>
-                                    <rect width="476" height="356" x="84" y="297" rx="6"></rect>
-                                </clipPath>
-                            </defs>
-                            <g mask="url(#hero-mask)">
-                                <rect width="777" height="605" x="68.5" y="-15.5" rx="6"
-                                    stroke="rgba(128, 135, 149, 0.2)" fill="none" vector-effect="non-scaling-stroke">
-                                </rect>
-                                <line vector-effect="non-scaling-stroke" x1="576" x2="576" y1="-15" y2="605"
-                                    stroke="rgba(128, 135, 149, 0.2)"></line>
-                                <line vector-effect="non-scaling-stroke" x1="68.5" x2="576" y1="281" y2="281"
-                                    stroke="rgba(128, 135, 149, 0.2)"></line>
-                                <line vector-effect="non-scaling-stroke" x1="576" x2="845.5" y1="234" y2="234"
-                                    stroke="rgba(128, 135, 149, 0.2)"></line>
-                                <g filter="url(#hero-drop-shadow)">
-                                    <g filter="url(#hero-drop-shadow-2)">
-                                        {{-- <image class="sm:w-96 sm:h-96" href="img/hero.jpg" /> --}}
-                                    </g>
+                    <svg viewBox="0 0 500 59"
+                        class="w-175 sm:w-[56.25rem] overflow-visible relative lg:absolute lg:top-0 lg:left-0 mx-auto lg:mx-0 mb-[-17%] sm:-mb-44 lg:mb-0">
+                        <defs>
+                            <filter id="hero-drop-shadow">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="20"></feGaussianBlur>
+                                <feOffset dx="0" dy="10" result="offsetblur"></feOffset>
+                                <feFlood flood-color="rgba(0,0,0,0.25)"></feFlood>
+                                <feComposite in2="offsetblur" operator="in"></feComposite>
+                                <feMerge>
+                                    <feMergeNode></feMergeNode>
+                                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                                </feMerge>
+                            </filter>
+                            <filter id="hero-drop-shadow-2">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="6"></feGaussianBlur>
+                                <feOffset dx="0" dy="3" result="offsetblur"></feOffset>
+                                <feFlood flood-color="rgba(0,0,0,0.2)"></feFlood>
+                                <feComposite in2="offsetblur" operator="in"></feComposite>
+                                <feMerge>
+                                    <feMergeNode></feMergeNode>
+                                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                                </feMerge>
+                            </filter>
+                            <linearGradient id="hero-gradient" gradientTransform="rotate(90)">
+                                <stop offset="0%" stop-color="white"></stop>
+                                <stop offset="80%" stop-color="white" stop-opacity="0.2"></stop>
+                                <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
+                            </linearGradient>
+                            <mask id="hero-mask">
+                                <rect x="-32" y="-32" width="964" height="653" fill="url(#hero-gradient)"></rect>
+                            </mask>
+                            <clipPath id="one">
+                                <rect width="560" height="265" rx="6"></rect>
+                                <rect width="308" height="218" x="592" rx="6"></rect>
+                                <rect width="236" height="241" x="592" y="250" rx="6"></rect>
+                                <rect width="476" height="356" x="84" y="297" rx="6"></rect>
+                            </clipPath>
+                        </defs>
+                        <g mask="url(#hero-mask)">
+                            <rect width="777" height="605" x="68.5" y="-15.5" rx="6" stroke="rgba(128, 135, 149, 0.2)"
+                                fill="none" vector-effect="non-scaling-stroke">
+                            </rect>
+                            <line vector-effect="non-scaling-stroke" x1="576" x2="576" y1="-15" y2="605"
+                                stroke="rgba(128, 135, 149, 0.2)"></line>
+                            <line vector-effect="non-scaling-stroke" x1="68.5" x2="576" y1="281" y2="281"
+                                stroke="rgba(128, 135, 149, 0.2)"></line>
+                            <line vector-effect="non-scaling-stroke" x1="576" x2="845.5" y1="234" y2="234"
+                                stroke="rgba(128, 135, 149, 0.2)"></line>
+                            <g filter="url(#hero-drop-shadow)">
+                                <g filter="url(#hero-drop-shadow-2)">
+                                    {{-- <image class="sm:w-96 sm:h-96" href="img/hero.jpg" /> --}}
                                 </g>
                             </g>
-                        </svg>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div
+                class="relative grid max-w-screen-sm gap-10 mx-auto text-sm lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                <div class="flex space-x-6">
+                    <svg width="44" height="44" fill="none" class="flex-none">
+                        <g filter="url(#hero-feature-1-filter)">
+                            <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
+                                fill="#1F2937"></path>
+                        </g>
+                        <path
+                            d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
+                            stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path
+                            d="M29 27.335L32.25 29l-6.603 3.382a8 8 0 01-7.294 0L11.75 29 15 27.335M29 20.336L32.25 22l-6.603 3.382a8 8 0 01-7.294 0L11.75 22 15 20.336"
+                            stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M11.75 15l9.338-4.783a2 2 0 011.824 0L32.25 15l-6.603 3.382a8 8 0 01-7.294 0L11.75 15z"
+                            fill="#22D3EE" fill-opacity=".2" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <defs>
+                            <filter id="hero-feature-1-filter" x="2" y="1" width="40" height="41"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="-1"></feOffset>
+                                <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
+                                <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="mb-2 font-semibold text-white">World Class Layouts</h2>
+                        <p class="leading-normal">Beautifully designed, expertly crafted components that follow all
+                            accessibility best practices and are easy to customize.</p>
                     </div>
                 </div>
-                <div
-                    class="relative grid max-w-screen-sm gap-10 mx-auto text-sm lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-                    <div class="flex space-x-6">
-                        <svg width="44" height="44" fill="none" class="flex-none">
-                            <g filter="url(#hero-feature-1-filter)">
-                                <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
-                                    fill="#1F2937"></path>
-                            </g>
-                            <path
-                                d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
-                                stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path
-                                d="M29 27.335L32.25 29l-6.603 3.382a8 8 0 01-7.294 0L11.75 29 15 27.335M29 20.336L32.25 22l-6.603 3.382a8 8 0 01-7.294 0L11.75 22 15 20.336"
-                                stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path
-                                d="M11.75 15l9.338-4.783a2 2 0 011.824 0L32.25 15l-6.603 3.382a8 8 0 01-7.294 0L11.75 15z"
-                                fill="#22D3EE" fill-opacity=".2" stroke="#22D3EE" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                            <defs>
-                                <filter id="hero-feature-1-filter" x="2" y="1" width="40" height="41"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha"></feColorMatrix>
-                                    <feOffset dy="-1"></feOffset>
-                                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
-                                    <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                </filter>
-                            </defs>
-                        </svg>
-                        <div>
-                            <h2 class="mb-2 font-semibold text-white">World Class Layouts</h2>
-                            <p class="leading-normal">Beautifully designed, expertly crafted components that follow all
-                                accessibility best practices and are easy to customize.</p>
-                        </div>
+                <div class="flex space-x-6">
+                    <svg width="44" height="44" fill="none" class="flex-none">
+                        <g filter="url(#hero-feature-2-filter)">
+                            <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
+                                fill="#1F2937"></path>
+                        </g>
+                        <path
+                            d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
+                            stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M24.25 13.75l-4.5 16.5" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round">
+                        </path>
+                        <path
+                            d="M18.75 9.75h-1a4 4 0 00-4 4v4.007a3 3 0 01-.879 2.122v0a3 3 0 000 4.242v0a3 3 0 01.879 2.122v4.007a4 4 0 004 4h1M25.25 9.75h1a4 4 0 014 4v4.007a3 3 0 00.879 2.122v0a3 3 0 010 4.242v0a3 3 0 00-.879 2.122v4.007a4 4 0 01-4 4h-1"
+                            stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <defs>
+                            <filter id="hero-feature-2-filter" x="2" y="1" width="40" height="41"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="-1"></feOffset>
+                                <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
+                                <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="mb-2 font-semibold text-white">Highly optimized code</h2>
+                        <p class="leading-normal">Fully interactive, accessibility-focused code snippets for React
+                            and Vue, plus vanilla HTML if you’d rather write any necessary JS yourself.</p>
                     </div>
-                    <div class="flex space-x-6">
-                        <svg width="44" height="44" fill="none" class="flex-none">
-                            <g filter="url(#hero-feature-2-filter)">
-                                <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
-                                    fill="#1F2937"></path>
-                            </g>
-                            <path
-                                d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
-                                stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M24.25 13.75l-4.5 16.5" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round">
-                            </path>
-                            <path
-                                d="M18.75 9.75h-1a4 4 0 00-4 4v4.007a3 3 0 01-.879 2.122v0a3 3 0 000 4.242v0a3 3 0 01.879 2.122v4.007a4 4 0 004 4h1M25.25 9.75h1a4 4 0 014 4v4.007a3 3 0 00.879 2.122v0a3 3 0 010 4.242v0a3 3 0 00-.879 2.122v4.007a4 4 0 01-4 4h-1"
-                                stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <defs>
-                                <filter id="hero-feature-2-filter" x="2" y="1" width="40" height="41"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha"></feColorMatrix>
-                                    <feOffset dy="-1"></feOffset>
-                                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
-                                    <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                </filter>
-                            </defs>
-                        </svg>
-                        <div>
-                            <h2 class="mb-2 font-semibold text-white">Highly optimized code</h2>
-                            <p class="leading-normal">Fully interactive, accessibility-focused code snippets for React
-                                and Vue, plus vanilla HTML if you’d rather write any necessary JS yourself.</p>
-                        </div>
-                    </div>
-                    <div class="flex space-x-6">
-                        <svg width="44" height="44" fill="none" class="flex-none">
-                            <g filter="url(#hero-feature-3-filter)">
-                                <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
-                                    fill="#1F2937"></path>
-                            </g>
-                            <path
-                                d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
-                                stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M9.75 23.25v-1.5a4 4 0 014-4h8.5a4 4 0 014 4v8.5a4 4 0 01-4 4h-1.5"
-                                stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M29.75 34.25h.5a4 4 0 004-4v-18.5a2 2 0 00-2-2h-18.5a4 4 0 00-4 4v.5"
-                                stroke="#475569" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <path d="M33.5 10.5l-23 23" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round">
-                            </path>
-                            <path d="M27.75 9.75h4.5a2 2 0 012 2v4.5M16.25 34.25h-4.5a2 2 0 01-2-2v-4.5"
-                                stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            </path>
-                            <defs>
-                                <filter id="hero-feature-3-filter" x="2" y="1" width="40" height="41"
-                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                    <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                        result="hardAlpha"></feColorMatrix>
-                                    <feOffset dy="-1"></feOffset>
-                                    <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
-                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                                    <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
-                                    <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
-                                </filter>
-                            </defs>
-                        </svg>
-                        <div>
-                            <h2 class="mb-2 font-semibold text-white">Fully Responsive UI & UX design</h2>
-                            <p class="leading-normal">Every example is fully responsive and carefully designed and
-                                implemented to look great at any screen size.</p>
-                        </div>
+                </div>
+                <div class="flex space-x-6">
+                    <svg width="44" height="44" fill="none" class="flex-none">
+                        <g filter="url(#hero-feature-3-filter)">
+                            <path d="M2 10a8 8 0 018-8h24a8 8 0 018 8v24a8 8 0 01-8 8H10a8 8 0 01-8-8V10z"
+                                fill="#1F2937"></path>
+                        </g>
+                        <path
+                            d="M2.75 10A7.25 7.25 0 0110 2.75h24A7.25 7.25 0 0141.25 10v24A7.25 7.25 0 0134 41.25H10A7.25 7.25 0 012.75 34V10z"
+                            stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M9.75 23.25v-1.5a4 4 0 014-4h8.5a4 4 0 014 4v8.5a4 4 0 01-4 4h-1.5" stroke="#475569"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M29.75 34.25h.5a4 4 0 004-4v-18.5a2 2 0 00-2-2h-18.5a4 4 0 00-4 4v.5" stroke="#475569"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M33.5 10.5l-23 23" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round">
+                        </path>
+                        <path d="M27.75 9.75h4.5a2 2 0 012 2v4.5M16.25 34.25h-4.5a2 2 0 01-2-2v-4.5" stroke="#22D3EE"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <defs>
+                            <filter id="hero-feature-3-filter" x="2" y="1" width="40" height="41"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="-1"></feOffset>
+                                <feGaussianBlur stdDeviation=".5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"></feColorMatrix>
+                                <feBlend in2="shape" result="effect1_innerShadow"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div>
+                        <h2 class="mb-2 font-semibold text-white">Fully Responsive UI & UX design</h2>
+                        <p class="leading-normal">Every example is fully responsive and carefully designed and
+                            implemented to look great at any screen size.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!--Overlay-->
-        <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal"
-            :class="{ 'absolute inset-0 z-50 flex items-center justify-center': showModal }">
-            <!--Dialog-->
-            <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md" x-show="showModal"
-                @click.away="showModal = false" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 transform-gpu scale-90"
-                x-transition:enter-end="opacity-100 transform-gpu scale-100"
-                x-transition:leave="transition ease-in duration-300"
-                x-transition:leave-start="opacity-100 transform-gpu scale-100"
-                x-transition:leave-end="opacity-0 transform-gpu scale-90">
+    <!--Overlay-->
+    <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal"
+        :class="{ 'absolute inset-0 z-50 flex items-center justify-center': showModal }">
+        <!--Dialog-->
+        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md" x-show="showModal"
+            @click.away="showModal = false" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform-gpu scale-90"
+            x-transition:enter-end="opacity-100 transform-gpu scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform-gpu scale-100"
+            x-transition:leave-end="opacity-0 transform-gpu scale-90">
 
-                <!--Title-->
-                <div class="flex items-center justify-between pb-3">
-                    <p class="text-2xl font-bold">Let's Talk!</p>
-                    <div class="z-50 cursor-pointer" @click="showModal = false">
-                        <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                            viewBox="0 0 18 18">
-                            <path
-                                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                            </path>
-                        </svg>
+            <!--Title-->
+            <div class="flex items-center justify-between pb-3">
+                <p class="text-2xl font-bold">Let's Talk!</p>
+                <div class="z-50 cursor-pointer" @click="showModal = false">
+                    <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 18 18">
+                        <path
+                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- content -->
+            <form method="POST" action="{{ route('client-order.store') }}">
+                @csrf
+
+                <div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span
+                            class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
                     </div>
+                    <input name="company" type="text" id="company"
+                        class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
+                        placeholder="Company Name">
                 </div>
 
-                <!-- content -->
-                <form action="{{ route('query') }}" method="POST">
-                    <div class="relative flex flex-wrap items-stretch w-full mb-4">
-                        <div class="flex -mr-px">
-                            <span
-                                class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
-                        </div>
-                        <input name="company" type="text"
-                            class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
-                            placeholder="Company name">
+                <div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span
+                            class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
                     </div>
-                    <div class="relative flex flex-wrap items-stretch w-full mb-4">
-                        <div class="flex -mr-px">
-                            <span
-                                class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
-                        </div>
-                        <input name="fullname" type="text"
-                            class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
-                            placeholder="Full name">
-                    </div>
-                    <div class="relative flex flex-wrap items-stretch w-full mb-4">
-                        <div class="flex -mr-px">
-                            <span
-                                class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
-                        </div>
-                        <input name="email" type="text"
-                            class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
-                            placeholder="Email">
-                    </div>
-                    <div class="relative flex flex-wrap items-stretch w-full mb-4">
-                        <div class="flex -mr-px">
-                            <span
-                                class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
-                        </div>
-                        <input name="phone" type="text"
-                            class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
-                            placeholder="Phone with country code">
-                    </div>
-                    <div class="flex flex-col space-y-2 text-gray-700">
-                        <p>How can we help you?</p>
-                        <label class="inline-flex items-center space-x-2">
-                            <input name="createapp" type="checkbox" class="w-5 h-5 text-gray-700 rounded form-checkbox"
-                                checked><span class="">Create Application</span>
-                        </label>
-                        <label class="inline-flex items-center space-x-2">
-                            <input name="seo" type="checkbox" class="w-5 h-5 text-gray-700 rounded form-checkbox"
-                                checked><span class="">Optimize SEO</span>
-                        </label>
-                        <label class="inline-flex items-center space-x-2">
-                            <input name="mvp" type="checkbox" class="w-5 h-5 text-gray-700 rounded form-checkbox"
-                                checked><span class="">MVP</span>
-                        </label>
-                    </div>
-                    <!--Footer-->
-                    <div class="flex justify-end pt-2 space-x-3">
-                        <button type="submit"
-                            class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">Submit</button>
-                        <a class="px-4 py-3 text-white bg-black rounded-lg cursor-pointer hover:bg-blue-hover"
-                            @click="showModal = false">Close</a>
-                    </div>
+                    <input name="full_name" type="text" id="full_name"
+                        class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
+                        placeholder="Full Name">
+                </div>
 
-                </form>
+                <div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span
+                            class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input name="email" type="text" id="email"
+                        class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
+                        placeholder="Email">
+                </div>
+
+                <div class="relative flex flex-wrap items-stretch w-full mb-4">
+                    <div class="flex -mr-px">
+                        <span
+                            class="flex items-center px-3 text-sm leading-normal whitespace-no-wrap border border-r-0 rounded rounded-r-none bg-grey-lighter border-grey-light text-grey-dark">@</span>
+                    </div>
+                    <input name="phone" type="text" id="phone"
+                        class="relative flex-auto flex-grow flex-shrink w-px h-10 px-3 leading-normal border rounded rounded-l-none border-grey-light focus:border-blue focus:shadow"
+                        placeholder="Phone with country code">
+                </div>
+
+                <div class="flex flex-col space-y-2 text-gray-700">
+                    <p>How can we help you?</p>
+
+                    @foreach (['create_app', 'seo', 'mvp'] as $checkbox)
+                    <label class="inline-flex items-center space-x-2">
+                        <input name="{{ $checkbox }}" id="{{ $checkbox }}" type="checkbox"
+                            class="w-5 h-5 text-gray-700 rounded form-checkbox" checked><span
+                            class="">{{ $checkbox }}</span>
+                    </label>
+                    @endforeach
+
+                </div>
+                <!--Footer-->
+                <div class="flex justify-end pt-2 space-x-3">
+                    <button type="submit"
+                        class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">Submit</button>
+                    <a class="px-4 py-3 text-white bg-black rounded-lg cursor-pointer hover:bg-blue-hover"
+                        @click="showModal = false">Close</a>
+                </div>
+
+            </form>
 
 
-            </div>
-            <!--/Dialog -->
-        </div><!-- /Overlay -->
+        </div>
+        <!--/Dialog -->
+    </div><!-- /Overlay -->
     </div>
 
 

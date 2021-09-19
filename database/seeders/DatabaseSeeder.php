@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\ClientOrder;
 use App\Models\Comment;
 use App\Models\Idea;
 use App\Models\Status;
@@ -21,35 +22,35 @@ class DatabaseSeeder extends Seeder
     {
 
         User::factory()->create([
-            'name'=>'Mohamed',
-            'email'=>'modijavelin@gmail.com'
+            'name' => 'Mohamed',
+            'email' => 'modijavelin@gmail.com'
         ]);
 
         User::factory(19)->create();
 
-        Category::factory()->create(['name'=>'Category 1']);
-        Category::factory()->create(['name'=>'Category 2']);
-        Category::factory()->create(['name'=>'Category 3']);
-        Category::factory()->create(['name'=>'Category 4']);
+        Category::factory()->create(['name' => 'Category 1']);
+        Category::factory()->create(['name' => 'Category 2']);
+        Category::factory()->create(['name' => 'Category 3']);
+        Category::factory()->create(['name' => 'Category 4']);
 
-        Status::factory()->create(['name'=>'Open']);
-        Status::factory()->create(['name'=>'Considering']);
-        Status::factory()->create(['name'=>'In Progress']);
-        Status::factory()->create(['name'=>'Implemented']);
-        Status::factory()->create(['name'=>'Closed']);
-        
+        Status::factory()->create(['name' => 'Open']);
+        Status::factory()->create(['name' => 'Considering']);
+        Status::factory()->create(['name' => 'In Progress']);
+        Status::factory()->create(['name' => 'Implemented']);
+        Status::factory()->create(['name' => 'Closed']);
+
 
         // \App\Models\User::factory(10)->create();
         Idea::factory(100)->create();
 
         //Generate unique votes.ensure idea_id and user_id are unique for each row
 
-        foreach(range(1,20)as $user_id){
-            foreach(range(1,100)as $idea_id){
-                if($idea_id % 2 === 0){
+        foreach (range(1, 20) as $user_id) {
+            foreach (range(1, 100) as $idea_id) {
+                if ($idea_id % 2 === 0) {
                     Vote::factory()->create([
-                        'user_id'=> $user_id,
-                        'idea_id'=> $idea_id
+                        'user_id' => $user_id,
+                        'idea_id' => $idea_id
                     ]);
                 }
             }
@@ -58,8 +59,10 @@ class DatabaseSeeder extends Seeder
 
         //Generate comments for ideas
 
-        foreach(Idea::all() as $idea){
+        foreach (Idea::all() as $idea) {
             Comment::factory(5)->existing()->create(['idea_id' => $idea->id]);
         }
+
+        ClientOrder::factory()->count(20)->create();
     }
 }

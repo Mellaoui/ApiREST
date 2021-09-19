@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\EmailistController;
 use App\Http\Controllers\IdeaController;
-use App\Http\Controllers\QueryController;
+use App\Http\Controllers\ClientOrdersController;
 use App\Mail\CustomerEmail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -30,15 +30,18 @@ Route::get('/quote', function () {
     return view('quote');
 })->name('quote');
 
+Route::post('/emailist', [EmailistController::class, 'add'])
+    ->name('email-list');
 
-Route::post('/emailist', [EmailistController::class, 'add'])->name('email-list');
+Route::middleware(['auth:sanctum', 'verified'])
+    ->get('/community', [IdeaController::class, 'index'])
+    ->name('community');
 
+Route::get('/overview', [IdeaController::class, 'index'])
+    ->name('overview');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/community',[IdeaController::class, 'index'])->name('community');
-
-Route::get('/overview',[IdeaController::class,'index'])->name('overview');
-
-Route::get('/community/single/{idea:slug}',[IdeaController::class,'show'])->name('showIdea');
+Route::get('/community/single/{idea:slug}', [IdeaController::class, 'show'])
+    ->name('showIdea');
 
 Route::get('/email', function () {
 
@@ -47,11 +50,11 @@ Route::get('/email', function () {
         'description' => 'This is a test email'
     ];
 
-        Mail::to('modijavelin@gmail.com')->send(new CustomerEmail($details));
+    Mail::to('modijavelin@gmail.com')
+        ->send(new CustomerEmail($details));
 
-        dd('Sent');
-
+    dd('Sent');
 });
 
-
-Route::post('/query',[QueryController::class,'store'])->name('query');
+Route::post('/client-order', [ClientOrdersController::class, 'store'])
+    ->name('client-order.store');
