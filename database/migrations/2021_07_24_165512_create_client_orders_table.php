@@ -18,6 +18,8 @@ class CreateClientOrdersTable extends Migration
             $table->string('create_app')->default('false');
             $table->string('seo')->default('false');
             $table->string('mvp')->default('false');
+            $table->string('wordpress')->default('false');
+            $table->string('bug_fix')->default('false');
 
             $table->timestamps();
         });

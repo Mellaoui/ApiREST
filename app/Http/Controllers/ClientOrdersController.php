@@ -31,7 +31,7 @@ class ClientOrdersController extends Controller
         }
         ClientOrder::create($attributes);
 
-        return redirect()->route('main-page');
+        return redirect()->route('landing')->with('status', 'Your order is well registered, Thank you!');
     }
 
     public function show()
@@ -64,6 +64,8 @@ class ClientOrdersController extends Controller
             'create_app' => 'sometimes',
             'seo' => 'sometimes',
             'mvp' => 'sometimes',
+            'wordpress' => 'sometimes',
+            'bug_fix' => 'sometimes'
         ]);
     }
 }

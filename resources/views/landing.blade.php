@@ -2,7 +2,7 @@
     <!--Nav-->
 
     <div class="flex flex-col pb-32"
-        x-data="{ scrollAtTop: true, dropDown: false, showModal: false, profileDown: false }">
+        x-data="{ scrollAtTop: true, dropDown: false, showOrderModal: false, profileDown: false, showStatusModal: true }">
 
         <nav :class="{ 'bg-white shadow-md' : !scrollAtTop }"
             class="fixed z-50 w-full p-4 duration-500 ease-in-out transform-gpu"
@@ -269,6 +269,7 @@
                         <span class="leading-relaxed text-teal-400 ">Dedicated team,</span>for building your mobile
                         and web applications
                     </h1>
+
                     <p class="mb-4 text-sm font-semibold tracking-wide uppercase">E-commerce, Messaging, Socialmedia
                         Networking, B2B & B2C</p>
                     <p class="order-2 mb-8 leading-relaxed">We are a leading application development company based
@@ -417,7 +418,7 @@
                         </dd>
                     </dl>
                     <div class="grid order-2 w-full grid-cols-1 gap-3 text-center sm:flex sm:gap-0 sm:space-x-6">
-                        <a @click="showModal = true" href="#"
+                        <a @click="showOrderModal = true" href="#"
                             class="px-4 py-3 text-sm font-semibold text-gray-900 duration-300 bg-white rounded-lg transform-gpu hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Hire
                             Molabs</a>
                         <a href="{{ route('our-tech') }}"
@@ -609,28 +610,20 @@
     </div>
 
     <!--Overlay-->
-    <div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal"
-        :class="{ 'absolute inset-0 z-50 flex items-center justify-center': showModal }">
+    <div class="overflow-auto absolute inset-0 z-50 flex items-center justify-center"
+        style="background-color: rgba(0,0,0,0.5)" x-show="showOrderModal"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform-gpu scale-90"
+        x-transition:enter-end="opacity-100 transform-gpu scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 transform-gpu scale-100"
+        x-transition:leave-end="opacity-0 transform-gpu scale-90">
         <!--Dialog-->
-        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md" x-show="showModal"
-            @click.away="showModal = false" x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform-gpu scale-90"
-            x-transition:enter-end="opacity-100 transform-gpu scale-100"
-            x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="opacity-100 transform-gpu scale-100"
-            x-transition:leave-end="opacity-0 transform-gpu scale-90">
+        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md">
 
             <!--Title-->
-            <div class="flex items-center justify-between pb-3">
+            <div class="flex items-center pb-3">
                 <p class="text-2xl font-bold">Let's Talk!</p>
-                <div class="z-50 cursor-pointer" @click="showModal = false">
-                    <svg class="text-black fill-current" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 18 18">
-                        <path
-                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                        </path>
-                    </svg>
-                </div>
             </div>
 
             <!-- content -->
@@ -680,7 +673,7 @@
                 <div class="flex flex-col space-y-2 text-gray-700">
                     <p>How can we help you?</p>
 
-                    @foreach (['create_app', 'seo', 'mvp'] as $checkbox)
+                    @foreach (['create_app', 'seo', 'mvp', 'wordpress', 'bug_fix'] as $checkbox)
                     <label class="inline-flex items-center space-x-2">
                         <input name="{{ $checkbox }}" id="{{ $checkbox }}" type="checkbox"
                             class="w-5 h-5 text-gray-700 rounded form-checkbox" checked><span
@@ -691,10 +684,10 @@
                 </div>
                 <!--Footer-->
                 <div class="flex justify-end pt-2 space-x-3">
-                    <button type="submit"
+                    <button type="submit" @click="showOrderModal = false"
                         class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">Submit</button>
                     <a class="px-4 py-3 text-white bg-black rounded-lg cursor-pointer hover:bg-blue-hover"
-                        @click="showModal = false">Close</a>
+                        @click="showOrderModal = false">Close</a>
                 </div>
 
             </form>
@@ -703,10 +696,33 @@
         </div>
         <!--/Dialog -->
     </div><!-- /Overlay -->
-    </div>
 
+    @if (session('status'))
+    <!--Overlay-->
+    <div class="overflow-auto absolute inset-0 z-50 flex items-center justify-center"
+        style="background-color: rgba(0,0,0,0.5)" x-show="showStatusModal"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 transform-gpu scale-90"
+        x-transition:enter-end="opacity-100 transform-gpu scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 transform-gpu scale-100"
+        x-transition:leave-end="opacity-0 transform-gpu scale-90">
+        <!--Dialog-->
+        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md"
+            @click.away="showStatusModal = false">
 
+            <div class="flex flex-col items-center pb-3">
+                <p class="text-2xl text-center font-bold" style="color: rgb(75,181,67)">
+                    {{ session('status') }}
+                </p>
+                <p class="text-center font-bold text-xs uppercase pt-2">(click away to close)</p>
+            </div>
 
+        </div>
+        <!--/Dialog -->
+    </div><!-- /Overlay -->
+
+    @endif
 
     <div class="relative">
         <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"

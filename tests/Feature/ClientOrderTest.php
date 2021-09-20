@@ -22,9 +22,11 @@ class ClientOrderTest extends TestCase
             'create_app' => 'true',
             'seo' => 'true',
             'mvp' => 'true',
+            'wordpress' => 'false',
+            'bug_fix' => 'false'
         ]);
 
         $this->assertCount(1, ClientOrder::all());
-        $response->assertRedirect(route('main-page'));
+        $response->assertRedirect(route('landing'));
     }
 }

@@ -26,49 +26,56 @@ class Idea extends Model
         ];
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
     public function comments()
     {
-       return $this->hasMany(Comment::class);
+        return $this->hasMany(Comment::class);
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function status(){
+    public function status()
+    {
         return $this->belongsTo(Status::class);
     }
 
-    public function votes(){
-        return $this->belongsToMany(User::class,'votes');
+    public function votes()
+    {
+        return $this->belongsToMany(User::class, 'votes');
     }
 
-    public function getStatusClass(){
+    public function getStatusClass()
+    {
         $allStatuses = [
             'Open' => 'bg-gray-200',
-            'Considering'=> 'bg-purple text-white',
-            'In Progress'=> 'bg-yellow text-white',
-            'Implemented'=> 'bg-green text-white',
-            'Closed'=>'bg-red text-white'
+            'Considering' => 'bg-purple text-white',
+            'In Progress' => 'bg-yellow text-white',
+            'Implemented' => 'bg-green text-white',
+            'Closed' => 'bg-red text-white'
         ];
 
         return $allStatuses[$this->status->name];
     }
 
-    public function isVotedByUser(?User $user){
-        if(!$user) {
+    public function isVotedByUser(?User $user)
+    {
+        if (!$user) {
             return false;
-        }else{
-            return Vote::where('user_id', $user->id)->where('idea_id',$this->id)->exists();
+        } else {
+            return Vote::where('user_id', $user->id)->where('idea_id', $this->id)->exists();
         }
     }
 
 
-    public function Vote(User $user){
+    public function Vote(User $user)
+    {
         /*Vote::create([
             'user_id'=>$user->id,
             'idea_id'=>$this->id,
@@ -78,18 +85,18 @@ class Idea extends Model
     }
 
 
-    public function UnVote(User $user){
+    public function UnVote(User $user)
+    {
         //Vote::where('idea_id',$this->id)->where('user_id',$user->id)->first()->delete();
         $this->votes()->detach($user);
     }
 
-    public function getImage(){
+    public function getImage()
+    {
         return $this->image
             ?
-         Storage::disk('images')->url($this->image)
+            Storage::disk('images')->url($this->image)
             :
-         'Has no image';
+            'Has no image';
     }
-
-
 }

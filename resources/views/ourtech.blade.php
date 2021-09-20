@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <a href="{{ route('main-page') }}">
+            <a href="{{ route('landing') }}">
                 <button class="flex px-8 py-2 mx-auto font-extrabold duration-300 ease-in-out transform rounded shadow hover:scale-110 button hover:underline">Back to Home</button>
             </a>
         </div>

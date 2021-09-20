@@ -1,26 +1,15 @@
 <?php
 
-use App\Http\Controllers\EmailistController;
+use App\Http\Controllers\EmailListController;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\ClientOrdersController;
 use App\Mail\CustomerEmail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('landing');
-})->name('main-page');
+})->name('landing');
 
 Route::get('/ourtech', function () {
     return view('ourtech');
@@ -30,7 +19,7 @@ Route::get('/quote', function () {
     return view('quote');
 })->name('quote');
 
-Route::post('/emailist', [EmailistController::class, 'add'])
+Route::post('/email-list', [EmailListController::class, 'add'])
     ->name('email-list');
 
 Route::middleware(['auth:sanctum', 'verified'])

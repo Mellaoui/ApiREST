@@ -2,28 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Emailist;
+use App\Models\EmailList;
 
 use Illuminate\Http\Request;
 
-class EmailistController extends Controller
+class EmailListController extends Controller
 {
 
 
 
     public function add(Request $request)
     {
-        $emailist = new Emailist;
-        if(Emailist::where('email', $emailist->email)->exists()){
+        $email_list = new EmailList;
+        if (EmailList::where('email', $email_list->email)->exists()) {
             abort('404');
-        }else{
-            $emailist->name = $request->name;
-            $emailist->email = $request->email;
+        } else {
+            $email_list->name = $request->name;
+            $email_list->email = $request->email;
 
-            $emailist->save();
+            $email_list->save();
 
-            return redirect(route('main-page'));
+            return redirect(route('landing'));
         }
-
     }
 }
