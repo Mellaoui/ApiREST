@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!--Nav-->
 <!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
+    <div id="fb-root"></div>
 
 
     <div class="flex flex-col"
@@ -9,34 +9,34 @@
 
         <nav :class="{ 'bg-white shadow-md' : !scrollAtTop }"
             class="fixed z-50 w-full p-4 duration-500 ease-in-out transform-gpu"
-            @scroll.window="scrollAtTop = (window.pageYOffset > 50) ? false : true">
+            @scroll.window="scrollAtTop = (window.pageYOffset > 30) ? false : true">
             <div class="px-2 mx-auto max-w-7xl md:px-6 lg:px-8">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                         <!-- Mobile menu button-->
                         <button type="button"
-                            class="inline-flex items-center justify-center p-2 text-gray-400 duration-300 rounded-md transform-gpu hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            class="inline-flex items-center justify-center p-2 text-white duration-500 bg-gray-700 rounded-md outline-none transform-gpu focus:ring-2 ring-inset focus:ring-white"
                             @click="dropDown = !dropDown" aria-controls="mobile-menu" aria-expanded="false">
 
                             <span class="sr-only">Open main menu</span>
 
                             <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path x-show="!dropDown" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    x-transition:enter="transition ease-out duration-500"
-                                    x-transition:enter-start="opacity-0 transform-gpu scale-90"
-                                    x-transition:enter-end="opacity-100 transform-gpu scale-100"
-                                    x-transition:leave="transition ease-in duration-200"
-                                    x-transition:leave-start="opacity-100 transform-gpu scale-100"
-                                    x-transition:leave-end="opacity-0 transform-gpu scale-90"
+                                <path x-show.transition.duration.500ms="!dropDown" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    x-transition:enter="transition transform-gpu ease-out"
+                                    x-transition:enter-start="opacity-0 scale-90"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition transform-gpu ease-in"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90"
                                     d="M4 6h16M4 12h16M4 18h16" />
-                                <path x-show="dropDown" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    x-transition:enter="transition ease-out duration-500"
-                                    x-transition:enter-start="opacity-0 transform-gpu scale-90"
-                                    x-transition:enter-end="opacity-100 transform-gpu scale-100"
-                                    x-transition:leave="transition ease-in duration-200"
-                                    x-transition:leave-start="opacity-100 transform-gpu scale-100"
-                                    x-transition:leave-end="opacity-0 transform-gpu scale-90"
+                                <path x-show.transition.duration.500ms="dropDown" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    x-transition:enter="transition transform-gpu ease-out"
+                                    x-transition:enter-start="opacity-0 scale-90"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition transform-gpu ease-in"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-90"
                                     d="M6 18L18 6M6 6l12 12" />
                             </svg>
 
@@ -126,7 +126,7 @@
                     </div> --}}
                     <div class="flex-row hidden space-x-4 md:flex">
                         <a href="{{ route('login') }}"
-                            class="px-3 py-2 text-sm font-semibold duration-300 border-2 rounded-lg transform-gpu hover:border-black hover:bg-blue"
+                            class="px-3 py-2 text-sm font-semibold duration-300 border-2 rounded-lg transform-gpu hover:border-black hover:bg-teal-400"
                             :class="{ 'text-gray-900 bg-gray-300' : scrollAtTop }">Sign In</a>
                         <a href="{{ route('register') }}"
                             class="px-3 py-2 text-sm font-semibold duration-300 border-2 rounded-lg transform-gpu hover:border-black hover:bg-green"
@@ -137,13 +137,13 @@
 
         </nav>
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="fixed z-50 w-full mt-24 md:hidden sm:max-w-sm" id="mobile-menu" x-show="dropDown"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform-gpu scale-90"
-            x-transition:enter-end="opacity-100 transform-gpu scale-100"
-            x-transition:leave="transition ease-in duration-300"
-            x-transition:leave-start="opacity-100 transform-gpu scale-100"
-            x-transition:leave-end="opacity-0 transform-gpu scale-90">
+        <div class="fixed z-50 w-full mt-24 md:hidden sm:max-w-sm" id="mobile-menu" x-show.transition.duration.500ms="dropDown" x-cloak
+            x-transition:enter="transition ease-out transform-gpu"
+            x-transition:enter-start="opacity-0 scale-90"
+            x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in transform-gpu"
+            x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90">
             <div class="p-2 mt-2 ml-2 space-y-1 bg-white rounded-lg">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="#"
@@ -422,7 +422,7 @@
                     </dl>
                     <div class="grid order-2 w-full grid-cols-1 gap-3 text-center sm:flex sm:gap-0 sm:space-x-6">
                         <a @click="showOrderModal = true" href="#"
-                            class="px-4 py-3 text-sm font-semibold text-gray-900 duration-300 bg-white rounded-lg transform-gpu hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Hire
+                            class="px-4 py-3 text-sm font-semibold text-gray-900 duration-300 bg-gray-300 rounded-lg transform-gpu hover:bg-teal-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Hire
                             Molabs</a>
                         <a href="{{ route('our-tech') }}"
                             class="px-4 py-3 text-sm font-semibold text-gray-300 duration-300 bg-gray-800 rounded-lg transform-gpu hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900">Browse
@@ -558,16 +558,23 @@
     </div>
 
     <!--Overlay-->
-    <div class="absolute inset-0 z-50 flex items-center justify-center overflow-auto"
-        style="background-color: rgba(0,0,0,0.5)" x-show="showOrderModal"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 transform-gpu scale-90"
-        x-transition:enter-end="opacity-100 transform-gpu scale-100"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="opacity-100 transform-gpu scale-100"
-        x-transition:leave-end="opacity-0 transform-gpu scale-90">
+    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70" x-cloak
+        x-show="showOrderModal"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:enter="transition easee duration-500"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-transition:leave="transition ease duration-500">
         <!--Dialog-->
-        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md">
+        <div class="w-11/12 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg md:max-w-md" x-cloak
+        x-show="showOrderModal"
+        x-transition:enter-start="scale-90"
+        x-transition:enter-end="scale-100"
+        x-transition:enter="transform-gpu ease duration-500"
+        x-transition:leave-start="scale-100"
+        x-transition:leave-end="scale-90"
+        x-transition:leave="transform-gpu ease duration-500">
 
             <!--Title-->
             <div class="flex items-center pb-3">
@@ -622,19 +629,19 @@
                     <p>How can we help you?</p>
 
                     @foreach (['create_app', 'seo', 'mvp', 'wordpress', 'bug_fix'] as $checkbox)
-                    <label class="inline-flex items-center space-x-2">
+                    <div class="inline-flex items-center space-x-2">
                         <input name="{{ $checkbox }}" id="{{ $checkbox }}" type="checkbox"
-                            class="w-5 h-5 text-blue-500 rounded form-checkbox" checked><span
+                            class="w-5 h-5 text-gray-800 rounded form-checkbox focus:ring-teal-400" checked><span
                             class="">{{ $checkbox }}</span>
-                    </label>
+                    </div>
                     @endforeach
 
                 </div>
                 <!--Footer-->
                 <div class="flex justify-end pt-2 space-x-3">
                     <button type="submit" @click="showOrderModal = false"
-                        class="px-4 py-3 text-sm font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">Submit</button>
-                    <a class="px-4 py-3 text-white bg-black rounded-lg cursor-pointer hover:bg-blue-hover"
+                        class="px-6 py-2 text-sm font-semibold text-gray-900 bg-teal-400 rounded-lg hover:bg-gray-300 hover:text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 hover:scale-110 hover:underline">Submit</button>
+                    <a class="px-6 py-2 text-white bg-black rounded-lg cursor-pointer hover:bg-blue-hover"
                         @click="showOrderModal = false">Close</a>
                 </div>
 
