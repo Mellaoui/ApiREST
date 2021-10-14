@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!--Nav-->
 
-    <div class="flex flex-col pb-32"
+    <div class="flex flex-col"
         x-data="{ scrollAtTop: true, dropDown: false, showOrderModal: false, profileDown: false, showStatusModal: true }">
 
         <nav :class="{ 'bg-white shadow-md' : !scrollAtTop }"
@@ -58,7 +58,7 @@
                             <div class="flex space-x-4">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="#"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 duration-300 rounded-md transform-gpu hover:bg-gray-700 hover:text-white"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 duration-300 rounded-md transform-gpu hover:underline hover:text-white"
                                     aria-current="page" :class="{ 'text-gray-700' : !scrollAtTop }">Home</a>
 
                                 <a href="{{ route('our-tech') }}"
@@ -70,7 +70,7 @@
                                     :class="{ 'text-gray-700' : !scrollAtTop }">Technologies</a>
 
                                 <a href="{{ route('overview') }}"
-                                    class="px-3 py-2 text-sm font-medium text-gray-300 duration-300 rounded-md transform-gpu hover:bg-gray-700 hover:text-white"
+                                    class="px-3 py-2 text-sm font-medium text-gray-300 duration-300 rounded-md disable transform-gpu hover:bg-gray-700 hover:text-white"
                                     :class="{ 'text-gray-700' : !scrollAtTop }">Community</a>
                             </div>
                         </div>
@@ -259,7 +259,7 @@
 
     </nav> --}}
 
-    <div class="w-full -mt-32 overflow-hidden text-gray-300 bg-green-900 2xl:px-44 pt-44">
+    <div class="w-full pt-40 -mt-32 overflow-hidden text-gray-300 bg-green-900 2xl:px-44">
 
         <div class="px-4 pt-16 pb-16 mx-auto max-w-container sm:px-6 lg:px-8 lg:pt-9 xl:pt-20">
             <div class="sm:mb-24 xl:mb-32 lg:flex">
@@ -428,62 +428,7 @@
                 </div>
 
                 <div class="relative max-w-screen-sm mx-auto lg:max-w-none lg:-ml-12 lg:mr-0 xl:-ml-32">
-
-                    <svg viewBox="0 0 500 59"
-                        class="w-175 sm:w-[56.25rem] overflow-visible relative lg:absolute lg:top-0 lg:left-0 mx-auto lg:mx-0 mb-[-17%] sm:-mb-44 lg:mb-0">
-                        <defs>
-                            <filter id="hero-drop-shadow">
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="20"></feGaussianBlur>
-                                <feOffset dx="0" dy="10" result="offsetblur"></feOffset>
-                                <feFlood flood-color="rgba(0,0,0,0.25)"></feFlood>
-                                <feComposite in2="offsetblur" operator="in"></feComposite>
-                                <feMerge>
-                                    <feMergeNode></feMergeNode>
-                                    <feMergeNode in="SourceGraphic"></feMergeNode>
-                                </feMerge>
-                            </filter>
-                            <filter id="hero-drop-shadow-2">
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="6"></feGaussianBlur>
-                                <feOffset dx="0" dy="3" result="offsetblur"></feOffset>
-                                <feFlood flood-color="rgba(0,0,0,0.2)"></feFlood>
-                                <feComposite in2="offsetblur" operator="in"></feComposite>
-                                <feMerge>
-                                    <feMergeNode></feMergeNode>
-                                    <feMergeNode in="SourceGraphic"></feMergeNode>
-                                </feMerge>
-                            </filter>
-                            <linearGradient id="hero-gradient" gradientTransform="rotate(90)">
-                                <stop offset="0%" stop-color="white"></stop>
-                                <stop offset="80%" stop-color="white" stop-opacity="0.2"></stop>
-                                <stop offset="100%" stop-color="black" stop-opacity="0"></stop>
-                            </linearGradient>
-                            <mask id="hero-mask">
-                                <rect x="-32" y="-32" width="964" height="653" fill="url(#hero-gradient)"></rect>
-                            </mask>
-                            <clipPath id="one">
-                                <rect width="560" height="265" rx="6"></rect>
-                                <rect width="308" height="218" x="592" rx="6"></rect>
-                                <rect width="236" height="241" x="592" y="250" rx="6"></rect>
-                                <rect width="476" height="356" x="84" y="297" rx="6"></rect>
-                            </clipPath>
-                        </defs>
-                        <g mask="url(#hero-mask)">
-                            <rect width="777" height="605" x="68.5" y="-15.5" rx="6" stroke="rgba(128, 135, 149, 0.2)"
-                                fill="none" vector-effect="non-scaling-stroke">
-                            </rect>
-                            <line vector-effect="non-scaling-stroke" x1="576" x2="576" y1="-15" y2="605"
-                                stroke="rgba(128, 135, 149, 0.2)"></line>
-                            <line vector-effect="non-scaling-stroke" x1="68.5" x2="576" y1="281" y2="281"
-                                stroke="rgba(128, 135, 149, 0.2)"></line>
-                            <line vector-effect="non-scaling-stroke" x1="576" x2="845.5" y1="234" y2="234"
-                                stroke="rgba(128, 135, 149, 0.2)"></line>
-                            <g filter="url(#hero-drop-shadow)">
-                                <g filter="url(#hero-drop-shadow-2)">
-                                    {{-- <image class="sm:w-96 sm:h-96" href="img/hero.jpg" /> --}}
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
+                    <img src="img/coding.png" alt="hero">
                 </div>
             </div>
             <div
@@ -610,7 +555,7 @@
     </div>
 
     <!--Overlay-->
-    <div class="overflow-auto absolute inset-0 z-50 flex items-center justify-center"
+    <div class="absolute inset-0 z-50 flex items-center justify-center overflow-auto"
         style="background-color: rgba(0,0,0,0.5)" x-show="showOrderModal"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform-gpu scale-90"
@@ -676,7 +621,7 @@
                     @foreach (['create_app', 'seo', 'mvp', 'wordpress', 'bug_fix'] as $checkbox)
                     <label class="inline-flex items-center space-x-2">
                         <input name="{{ $checkbox }}" id="{{ $checkbox }}" type="checkbox"
-                            class="w-5 h-5 text-gray-700 rounded form-checkbox" checked><span
+                            class="w-5 h-5 text-blue-500 rounded form-checkbox" checked><span
                             class="">{{ $checkbox }}</span>
                     </label>
                     @endforeach
@@ -699,7 +644,7 @@
 
     @if (session('status'))
     <!--Overlay-->
-    <div class="overflow-auto absolute inset-0 z-50 flex items-center justify-center"
+    <div class="absolute inset-0 z-50 flex items-center justify-center overflow-auto"
         style="background-color: rgba(0,0,0,0.5)" x-show="showStatusModal"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform-gpu scale-90"
@@ -712,10 +657,10 @@
             @click.away="showStatusModal = false">
 
             <div class="flex flex-col items-center pb-3">
-                <p class="text-2xl text-center font-bold" style="color: rgb(75,181,67)">
+                <p class="text-2xl font-bold text-center" style="color: rgb(75,181,67)">
                     {{ session('status') }}
                 </p>
-                <p class="text-center font-bold text-xs uppercase pt-2">(click away to close)</p>
+                <p class="pt-2 text-xs font-bold text-center uppercase">(click away to close)</p>
             </div>
 
         </div>

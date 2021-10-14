@@ -139,7 +139,7 @@
   }
 
   .gradient {
-    background-image: linear-gradient(189deg, rgba(3, 15, 31, 1) 0%, rgba(0, 59, 52, 1) 100%);
+    background-image: linear-gradient(189deg,rgb(7, 64, 138)  0%, rgba(3, 15, 31, 1) 100%);
   }
 
   .button,
