@@ -1,5 +1,8 @@
 <x-guest-layout>
     <!--Nav-->
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
+
 
     <div class="flex flex-col"
         x-data="{ scrollAtTop: true, dropDown: false, showOrderModal: false, profileDown: false, showStatusModal: true }">
