@@ -26,7 +26,6 @@
                 "Noto Color Emoji";
             }
 
-
             #header{
     --background: transparent;
       position: fixed;

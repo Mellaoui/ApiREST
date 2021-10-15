@@ -21,4 +21,4 @@ if (mix.inProduction()) {
     mix.version();
 }
 
-mix.disableSuccessNotifications();
+mix.disableNotifications();
