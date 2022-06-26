@@ -13,6 +13,11 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        [
+            ['name' => 'Startups'],
+            ['name' => 'Economy'],
+            ['name' => 'World'],
+            ['name' => 'Tech']
+        ];
     }
 }
